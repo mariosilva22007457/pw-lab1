@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+
+.muda1{
+    background-color: blanchedalmond;
+
+}
+
+
+.muda2{
+    background-color: lightgoldenrodyellow;
+
+}
+
+
+.muda3{
+    background-color: khaki;
+
+}
+
+.esapco{
+	display: block;
+
+
+}
+
+    </style>
+
+    <title>Quizz</title>
+</head>
+<body style="background-color:lightblue">
+
+
+<header>
+
+    <nav>
+          <a href="index.html" target="_blank" ><i class="material-icons">computer </i> Introdução / </a>
+    <a href="local.html" target="_blank"><i class="material-icons">language </i>Localização / </a>
+    <a href="multimedia.html" target="_blank"><i class="material-icons"> tv </i> Multimédia / </a>
+    <a href="info.html" target="_blank"><i class="material-icons">info </i> Informações / </a>
+    <a href="../index.html" target="_blank"><i class="material-icons">home </i> Home (indice geral dos laboratórios) / </a>
+    <a href="quizz.html" target="_blank"><i class="material-icons">help </i> Quizz / </a>
+    <a href="html5-css.html" target="_blank"><i class="material-icons">web </i>  Html5-Css</a>
+
+
+    </nav>
+
+
+    <section>
+
+            <h3>QUIZZ Time!</h3>
+
+    <p>Através deste quizz, vamos testar o teu conhecimento sobre a cidade de Chicago</p>
+
+    </section>
+
+
+
+
+</header>
+
+<main>
+    <section>
+        <form method="POST" action="mailto: a22007457@alunos.ulht.pt" enctype="multipart/form-data">
+            <fieldset class="muda3"  >
+                <legend> Quizz sobre Chicago</legend>
+
+                <fieldset class="muda2">
+
+
+                    <legend> Info pessoal</legend>
+
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="fname" autocomplete="on" minlength="1" class="esapco">
+                    </p>
+
+                    <p>
+                        <label for="apelido">Apelido:</label>
+                        <input type="text" id="apelido" name="fname" autocomplete="on" min="1" class="esapco">
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="fname" autocomplete="on" minlength="5" class="esapco">
+                    </p>
+
+                    <p>
+                        <label for="imagem">Fotografia:</label>
+                        <input type="file" id="imagem" name="fname" class="esapco">
+                    </p>
+
+
+                    <fieldset class="muda1" >
+                        <legend> Quizz</legend>
+
+                        <p>
+                            <label for="pergunta1">1) Insira a sigla da cidade de Chicago:</label>
+                            <input type="text" id="pergunta1" name="Sigla" size="10" maxlength="2" class="esapco">
+                        </p>
+
+                        <legend> 2) Qual a população de Chicago:</legend>
+                        <p>
+                            <input type="radio" id="pergunta2.1" name="pergunta2" value="pop:" >
+                            <label for="pergunta2.1"> 3,898,747 </label>
+
+                            <input type="radio" id="pergunta2.2" name="pergunta2" value="pop:" >
+                            <label for="pergunta2.2"> 2,746,388 </label>
+
+                            <input type="radio" id="pergunta2.3" name="pergunta2" value="pop:" >
+                            <label for="pergunta2.3"> 4,312,432 </label>
+                        </p>
+
+                        <legend> 3) Área total (dimensão km²):</legend>
+                        <p>
+                            <input type="checkbox" id="pergunta3.1" name="pergunta3" value="KMTotal:" >
+                            <label for="pergunta3.1"> + de 1 200 km² </label>
+
+                            <input type="checkbox" id="pergunta3.2" name="pergunta3" value="KMTotal:" >
+                            <label for="pergunta3.2"> - 1000 km² </label>
+
+                            <input type="checkbox" id="pergunta3.3" name="pergunta3" value="KMTotal:" >
+                            <label for="pergunta3.3"> Entre 1000 a 1200 km² </label>
+                        </p>
+
+                        <legend> 4) Indique a data em que a cidade de Chicago foi "fundada"</legend>
+                        <p>
+                            <label for="pergunta4">Data </label>
+                            <input type="date" id="pergunta4" name="pergunta4" min="1800-01-01" >
+                        </p>
+
+                        <p>
+                            <label for="pergunta5"> 5) Escolha uma cor da bandeira da cidade:</label>
+                            <input type="color" id="pergunta5" name="pergunta5" value="color:" class="esapco">
+                        </p>
+
+                        <legend> 6) Quantos "counties" tem Chicago ?</legend>
+                        <p>
+                            <label for="pergunta6">Quantidade </label>
+                            <input type="number" id="pergunta6" name="pergunta6" min="0" max="100" step="10" class="esapco">
+                        </p>
+
+                        <legend> 7) Qual o ponto mais elevado de Chicago?</legend>
+                        <p>
+                            <label for="pergunta7">Altura (0m ~ 250m):</label>
+                            <input type="range" id="pergunta7" name="alturaLA:" min="0" max="250" class="esapco">
+                        </p>
+
+                        <legend> 8) Chicago pertence a que estado ?</legend>
+                        <p>
+                            <label for="pergunta8">Estados: </label>
+                            <input list="pergunta8" name="pergunta8">
+                            <datalist id="pergunta8">
+                                <option value="California">
+                                <option value="Hawaii">
+                                <option value="Alabama">
+                                <option value="Ohio">
+                                <option value="Illinois">
+                            </datalist>
+
+                        </p>
+
+                        <legend> 9) Gostavas de conhecer Chicago ?</legend>
+                        <p>
+                            <label for="pergunta9">Resposta:</label>
+                            <select id="pergunta9" name="pergunta9">
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </p>
+
+                        Insira a sua opinião:<br>
+                        <textarea name="Opinião" rows="10" cols="70"> Insira aqui a sua opinião. </textarea>
+
+                    </fieldset>
+                </fieldset>
+                <br>
+                <legend>Submit!</legend>
+                <input type="image" src="images/img_submit.gif" alt="Submit" width="48" height="48">
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+</body>
+</html>

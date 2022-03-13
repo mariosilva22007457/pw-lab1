@@ -1,0 +1,42 @@
+*{
+font-family: 'Fredoka', sans-serif;
+}
+
+
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+
+
+}
+
+.importante{
+  font-weight: bold;
+}
+
+#unico{
+  background-color: aquamarine;
+
+}
+
+        a:link{
+       color: blue;
+      }
+
+
+      a:visited{
+       color: green;
+      }
+
+      a:hover{
+          color: deeppink;
+      }
+      a:active{
+          color:red;
+      }
+
+   .center{
+        text-align: center;
+    }
+
