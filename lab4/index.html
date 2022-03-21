@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+">
+
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Fjalla+One&family=Fredoka&family=Secular+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+* {
+box-sizing: border-box;
+
+font-family: Ubuntu, sans-serif;
+
+}
+
+.capitais {
+    display: flex;
+    background-color: lightblue;
+    padding: 50px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center ;
+
+}
+
+.capitais > div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #888888;
+    margin: 10px;
+}
+
+.capitais img{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+}
+
+.capitais div div:last-child{
+    width: 150px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu  div{
+    display: flex;
+
+
+ }
+
+.menu a:last-child{
+    margin-left: auto;
+
+
+}
+
+a {
+    padding: 20px;
+    text-decoration: none;
+  background-color: lightcoral;
+  margin: 2px;
+  color: whitesmoke;
+  box-shadow: 2px 3px 3px lightgrey;
+  border-radius: 10px;
+
+}
+
+.nav-menu{
+
+    display:flex;
+
+
+}
+
+nav a:hover{
+  background-color: lightgray;
+   font-weight: bold;
+}
+
+
+.flex-container {
+height: 250px;
+ background-image: url("images/1330365.jpg");
+display: flex;
+justify-content: center;
+align-items: center;
+  background-repeat: no-repeat;
+    background-position: center;
+
+
+font-size: 2rem;
+ color: White;
+ font-weight: bold;
+}
+
+
+.mover_direita{
+    display: flex;
+justify-content: right;
+align-items: center;
+  background-repeat: no-repeat;
+    background-position: center;
+
+
+font-size: 2rem;
+ color: White;
+ font-weight: bold;
+    margin-left: 500px;
+}
+
+.dicas{
+display: flex;
+     flex-wrap: wrap;
+    background-color: lightblue;
+      justify-content:center;
+
+
+
+
+
+}
+
+.dicas div{
+      width: 350px;
+    height: 300px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: whitesmoke;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+}
+
+
+
+.destinos{
+
+display: grid;
+    grid-template-areas:
+                                "acores porto douro camping"
+                                "santo santo algarve camping";
+     padding: 20px;
+    margin: 10px;
+    gap: 5px;
+    background-color: lightblue;
+
+    }
+
+
+
+   .item1 {
+          grid-area: acores;
+
+        }
+
+        .item2 {
+          grid-area: porto;
+        }
+
+        .item3 {
+          grid-area: douro;
+        }
+
+        .item4 {
+          grid-area: algarve;
+        }
+
+        .item5 {
+          grid-area: santo;
+        }
+        .item6{
+            grid-area: camping;
+        }
+
+@media (min-width: 901px)  and (orientation: landscape){
+
+    .destinos{
+
+display: grid;
+    grid-template-areas:
+                                "acores porto douro camping"
+                                "santo santo algarve camping";
+    padding: 15px;
+    margin: 0px;
+    gap: 10px;
+    background-color: lightblue;
+
+    }
+
+
+    .texto_grande{
+ position: relative;
+    color: black;
+
+   bottom: 0;
+  left: 50px;
+    font-size: x-large;
+    font-family: 'Alfa Slab One', cursive;
+    display: flex;
+
+}
+
+
+
+.div_texto-paragrafo{
+
+   position: relative;
+    bottom: -5px;
+    left: 50px;
+
+    font-size: medium;
+    font-family: Fredoka, sans-serif;
+    display: flex;
+}
+
+.text{
+    position: relative;
+}
+
+.button {
+    position: absolute;
+  background-color: lightgray;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  right: 60px;
+    bottom: -20px;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+img{
+                width: 100%;
+                height: 100%
+            }
+
+      .item1 {
+          grid-area: acores;
+
+
+        }
+
+        .item2 {
+          grid-area: porto;
+
+        }
+
+        .item3 {
+          grid-area: douro;
+
+        }
+
+        .item4 {
+          grid-area: algarve;
+
+        }
+
+        .item5 {
+          grid-area: santo;
+
+        }
+        .item6{
+            grid-area: camping;
+
+        }
+
+
+
+
+
+
+
+
+    .destinos{
+
+display: grid;
+
+
+    grid-template-areas:
+
+
+        "acores porto"
+        "douro algarve"
+
+        "santo santo"
+        "camping camping";
+
+
+    padding: 20px;
+    margin: 10px;
+    gap: 10px;
+    background-color: lightblue;
+        justify-content: space-around;
+
+
+
+
+    }
+
+
+
+.dicas{
+display: flex;
+     flex-wrap: wrap;
+    background-color: lightblue;
+      justify-content:center;
+
+
+
+
+
+}
+
+.dicas div{
+      width: 350px;
+    height: 300px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: whitesmoke;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+}
+
+
+.texto_grande{
+ position: relative;
+    color: black;
+
+   bottom: 0;
+  left: 50px;
+
+    font-family: 'Alfa Slab One', cursive;
+    display: flex;
+     font-size: 3vmin;
+
+}
+
+
+
+.div_texto-paragrafo{
+
+   position: relative;
+    bottom: -1px;
+    left: 50px;
+
+
+    font-family: Fredoka, sans-serif;
+    display: flex;
+     font-size: 2.5vmin;
+}
+
+.text{
+
+    position: relative;
+}
+
+.button {
+
+    position: absolute;
+  background-color: lightgray;
+  border: none;
+  color: black;
+   padding: 0.9em 0.5em;
+  right: -4px;
+    bottom: -5px;
+  text-decoration: none;
+  display: flex;
+
+  margin: 4px 2px;
+  cursor: pointer;
+     font-size: 1.9vmin;
+
+}
+
+
+
+}
+
+.top-left {
+position: absolute;
+
+  color: white;
+    margin: 20px;
+
+    font-size: large;
+   font-family: 'Secular One', sans-serif;
+}
+
+.bottom-left {
+position: absolute;
+
+  color: white;
+
+
+    font-size: xx-large;
+
+font-family: 'Secular One', sans-serif;
+
+
+  bottom: 70px;
+  left: 20px;
+
+
+}
+
+.bottom-left2 {
+position: absolute;
+
+  color: white;
+
+
+    font-size: large;
+
+font-family: 'Secular One', sans-serif;
+
+  bottom: 30px;
+  left: 20px;
+
+
+}
+
+
+
+
+
+.container {
+  position: relative;
+ font-family: 'Secular One', sans-serif;
+
+    color: white;
+}
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<header>
+
+    <div class="menu">
+
+<nav class="nav-menu">
+    <a href="#C1">Cidades Europeias</a>
+  <a href="#C2">Dicas Para Vaiajar</a>
+  <a href="#C3">Destinos de Sonho</a>
+  <a href="../index.html">Labs</a>
+</nav>
+
+
+</div>
+
+    <br>
+
+    <div class="flex-container">
+    <img src="">
+
+    <div class="mover_direita"><p>Apelo à Paz</p></div>
+
+    </div>
+
+</header>
+
+<body >
+
+
+
+
+
+
+
+
+
+    <h1 id="C1">
+     Capitais Europeias
+
+    </h1>
+
+
+<div class="capitais">
+<div>
+
+    <div><img src="images\bruxelas.avif" alt=""> </div>
+    <div>
+         <p>Bruxelas</p>
+
+    </div>
+
+
+</div>
+
+
+    <div>
+
+    <div><img src="images\lisboa.avif" alt=""> </div>
+    <div>
+         <p>Lisboa</p>
+
+    </div>
+
+
+</div>
+
+
+    <div>
+
+    <div><img src="images\paris.avif" alt=""> </div>
+    <div>
+         <p>Paris</p>
+
+    </div>
+
+
+</div>
+
+
+    <div>
+
+    <div><img src="images\budapeste.avif" alt=""> </div>
+    <div>
+         <p>Budapeste</p>
+
+    </div>
+
+
+</div>
+
+    <div>
+
+    <div><img src="images\londres.avif" alt=""> </div>
+    <div>
+         <p>Londres</p>
+
+    </div>
+
+
+</div>
+
+    <div>
+
+    <div><img src="images\roma.avif" alt=""> </div>
+    <div>
+         <p>Roma</p>
+
+    </div>
+
+
+</div>
+
+    <div>
+
+    <div><img src="images\varsovia.avif" alt=""> </div>
+    <div>
+         <p>Varsovia</p>
+
+    </div>
+
+
+</div>
+
+
+    <div>
+
+    <div><img src="images\viena.avif" alt=""> </div>
+    <div>
+         <p>Viena</p>
+
+    </div>
+
+
+</div>
+
+
+
+
+    <div>
+
+    <div><img src="images\milao.avif" alt=""> </div>
+    <div>
+         <p>Milão</p>
+
+    </div>
+
+
+</div>
+
+       <div>
+
+    <div><img src="images\reykiavik.avif" alt=""> </div>
+    <div>
+         <p>Reykiavik</p>
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+<br>
+
+
+
+<h1 id="C2">
+    Dicas Para Viajantes
+</h1>
+
+<div class="dicas">
+    <div> <h1>  #1 Dica <i class="material-icons">book</i> </h1>
+        <p> As horas de viagem passam mais facilmente na companhia de um livro ou de uma boa série. Decida que livro o irá acompanhar nesta aventura e descarregue a sua série preferida.  </p>
+
+    </div>
+
+      <div> <h1> #2 Dica <i class="material-icons">note</i> </h1>
+        <p>Nas saídas noturnas deixe uma nota com o sítio para onde vai e da hora prevista de regresso. </p>
+
+    </div>
+
+      <div> <h1>  #3 Dica <i class="material-icons">⚠</i> </h1>
+        <p> Saber se há zonas «perigosas» na cidade ou país que vai visitar pode deixá-lo mais descansado. Já sabe os sítios a evitar.   </p>
+
+    </div>
+
+      <div> <h1>  #4 Dica <i > 🇬🇧</i> </h1>
+        <p> Falar inglês é uma mais valia, se bem que há lugares ou países em que lhe vai servir de pouco.Recomenda-se que leve sempre consigo um cartão com o nome do sítio onde está hospedado. </p>
+
+    </div>
+
+      <div> <h1>  #5 Dica <i class="material-icons">list</i> </h1>
+        <p>Lembre-se que uma das vantagens de viajar sozinho é a probabilidade de mudar de planos sempre que desejar, mas que estes também podem mudar de forma involuntária. </p>
+
+    </div>
+
+      <div> <h1>  #6 Dica <i class="material-icons">🍷</i> </h1>
+        <p> Não beba demasiado, ter os cinco sentidos em plena função pode evitar-lhe surpresas desagradáveis. </p>
+
+    </div>
+
+          <div> <h1>  #7 Dica <i class="material-icons">search</i> </h1>
+        <p> Conhecimento é poder. Quanto mais você souber sobre o destino, mais vai poder otimizar seu tempo e dinheiro quando chegar lá.  </p>
+
+    </div>
+
+          <div> <h1>  #8 Dica <i class="material-icons">map</i> </h1>
+        <p> Comece esta «pequena aventura» num país com uma cultura semelhante à sua, especialmente se for a sua primeira vez a viajar sozinho.    </p>
+
+    </div>
+
+
+
+</div>
+<br>
+
+<h1 id="C3">Destinos de Sonho </h1>
+
+<div class="destinos">
+       <div class="item1">
+       <div class="container">
+ <div class="top-left">Natureza</div>
+           <div class="bottom-left" >Açores</div>
+           <div class="bottom-left2">Venha conhecer os Açores</div>
+        <img src="images/acores.jpg" alt="error" >
+     </div>
+
+
+
+    </div>
+
+
+    <div class="item2">
+        <div class="container">
+         <div class="top-left">Rio</div>
+             <div class="bottom-left" >Porto</div>
+           <div class="bottom-left2">Venha conhecer o Porto</div>
+        <img src="images/porto.jpg" alt="error" >
+             </div>
+    </div>
+
+    <div class="item3">
+        <div class="container">
+
+         <div class="top-left">Serra</div>
+              <div class="bottom-left" >Douro</div>
+           <div class="bottom-left2">Venha conhecer o Douro</div>
+        <img src="images/douro.jpg" alt="error"  >
+            </div>
+    </div>
+
+    <div class="item5">
+        <div class="container">
+             <div class="top-left">Ilha</div>
+                 <div class="bottom-left" >Porto Santo</div>
+           <div class="bottom-left2">Venha conhecer Porto Santo</div>
+
+
+        <img src="images/santo.jpg" alt="error"  >
+            </div>
+    </div>
+
+    <div class="item4">
+        <div class="container">
+         <div class="top-left">Praia</div>
+                <div class="bottom-left" >Algarve</div>
+           <div class="bottom-left2">Venha conhecer o Algarve</div>
+
+         <img src="images/algarve.jpg" alt="error" >
+             </div>
+
+
+    </div>
+    <div class="item6">
+
+      <div> <img src="images/camping.jpg" alt="error">  </div>
+
+
+        <div class="text" > <p class="texto_grande"> Orçamento limitado?</p>
+
+        <p class="div_texto-paragrafo"> Encontre preços exclusivos com as nossas ofertas</p></div>
+
+        <div class="text"> <button class="button" > Ver Ofertas</button> </div>
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
