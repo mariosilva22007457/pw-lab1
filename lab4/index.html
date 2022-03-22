@@ -213,6 +213,9 @@ display: grid;
     }
 
 
+
+
+
     .texto_grande{
  position: relative;
     color: black;
@@ -258,13 +261,24 @@ display: grid;
 }
 
 
+    .img2 {
+                width: 20%;
+
+            }
+
+
+
+
 }
 
 @media (max-width: 900px) and (orientation: portrait) {
-img{
+img {
                 width: 100%;
                 height: 100%
             }
+
+
+
 
       .item1 {
           grid-area: acores;
@@ -297,7 +311,17 @@ img{
         }
 
 
+.div_texto2{
 
+
+
+ position: absolute;
+    font-family: Fredoka, sans-serif;
+    display: flex;
+     font-size: 6vmin;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -354,6 +378,15 @@ display: flex;
          align-items: center;
     flex-wrap: wrap;
      justify-content: space-around;
+
+}
+
+
+.nav-menu{
+
+    display:flex;
+    font-size: 2.5vmin;
+
 
 }
 
@@ -496,9 +529,9 @@ font-family: 'Secular One', sans-serif;
     <br>
 
     <div class="flex-container">
-    <img src="">
+    <img src="" class="img2">
 
-    <div class="mover_direita"><p>Apelo à Paz</p></div>
+    <div class="div_texto2" ><p >Apelo à Paz</p></div>
 
     </div>
 
