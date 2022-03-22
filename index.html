@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 <style>
 
     div + p {
@@ -16,30 +17,254 @@
 }
 
 
+
+
+
+
+
+
+aside {
+    width: 20%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+
+    font-style: italic;
+
+}
+
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 70%;
+
+
+  color: white;
+    text-align: center;
+
+}
+
+
+
+@media (max-width: 601px)  {
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 70%;
+    text-align: center;
+
+
+  color: white;
+
+}
+
+     .dicas{
+                display: grid;
+                grid-template: "a"
+                               "a"
+                               "a"
+                               "a"
+                               "b"
+                               "b"
+                               "b"
+                               "b";
+            }
+
+
+    aside > p {
+    margin: 2px;
+}
+
+    aside {
+
+    padding-left: 2px;
+    margin-left:2px;
+    float: bottom;
+    height: 10%;
+    font-style: italic;
+
+
+}
+
+
+}
+
+
+aside > p {
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+
+        .texto_grande{
+ position:   relative;
+    color: White;
+            display: flex;
+
+
+
+    font-family: 'Alfa Slab One', cursive;
+
+            justify-content: center;
+            align-items: center;
+     font-size: 6vmin;
+}
+
+
+                .texto_pequeno{
+ position: relative;
+    color: White;
+       list-style-type: none; /* Remove bullets */
+  padding: 10px; /* Remove padding */
+  margin: 10px; /* Remove margins */
+
+
+
+    font-family: 'Alfa Slab One', cursive;
+    display: flex;
+            justify-content: center;
+            align-items: center;
+
+                     font-size: 5vmin;
+}
+
+                body{
+                  background-image: url("lab4/images/giphy.gif");
+
+                }
+
+
+        @media (min-width: 601px) and (max-width: 800px){
+
+
+
+
+
+
+
+
+            h1{
+                font-size: 4em;
+                font-weight: bold;
+                color: Navy;
+            }
+
+            h2{
+                font-size: 2em;
+                color: RoyalBlue;
+            }
+
+            li{
+                font-size: 150%;
+                color: MediumOrchid;
+            }
+
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 70%;
+
+
+  color: white;
+    text-align: center;
+
+}
+
+    aside > p {
+    margin: .3rem;
+}
+
+    aside {
+    width: 10%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: bottom;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+
+}
+
+
+        }
+
+    /* unvisited link */
+a:link {
+  color: Blue;
+}
+
+/* visited link */
+a:visited {
+  color: greenyellow;
+}
+
+/* mouse over link */
+a:hover {
+  color: lightgoldenrodyellow;
+}
+
+/* selected link */
+a:active {
+  color: gray;
+}
+
 </style>
 
 
 
-    <title> PW Labs </title>
+    <title > PW Labs </title>
 </head>
+
 <body>
-<h1>
-    Programação Web: Laboratórios
+
+
+
+<h1 class="texto_grande">
+    Programação Web: Laboratórios 🧪
 </h1>
 
-<ul>
-    <li>  <a href="lab1/index.html" target="_blank" >  Laboratório 1: Conhecer a Internet com a minha primeira página Web </a></li>
-    <li>  <a href="lab2/index.html" target="_blank">  Laboratório 2: Explorando o HTML com o meu primeiro website </a></li>
-    <li>  <a href="lab3/index.html" target="_blank">  Laboratório 3: Website com Quizz e seletores CSS </a></li>
-    <li>  <a href="lab4/index.html" target="_blank">  Laboratório 4: SPA com layout responsivo baseado em Flexbox e Grid </a></li>
 
+<ul class="texto_pequeno"     >
+    <nav>
+
+<div class="dicas ">
+    <li>  <a href="lab1/index.html" target="_blank" >  Laboratório 1: Conhecer a Internet com a minha primeira página Web</a>🎈</li>
+    <li>  <a href="lab2/index.html" target="_blank">  Laboratório 2: Explorando o HTML com o meu primeiro website </a> 🖥</li>
+    <li>  <a href="lab3/index.html" target="_blank">  Laboratório 3: Website com Quizz e seletores CSS </a>🖱 </li>
+    <li>  <a href="lab4/index.html" target="_blank">  Laboratório 4: SPA com layout responsivo baseado em Flexbox e Grid </a > 📱</li>
+</div>
+        </nav>
 
 
 
 </ul>
 
-<p> Por : Mário Silva 22007457 aluno 2º ano do Curso de LEI da Universidade Lusofona.</p>
+<aside>
+      <figure>
+            <img src="lab4/images/wordcloud.png" id="frame">
 
+        </figure>
+</aside>
+
+
+
+<br>
+<br>
+
+<div>
+<footer > <p class="texto_pequeno"> Por : Mário Silva 22007457 aluno 2º ano do Curso de LEI da Universidade Lusofona.</p>
+</footer>
+
+      </div>
 
 
 
