@@ -4,3 +4,379 @@ font-family: Ubuntu, sans-serif;
 }
 
 
+.parallax {
+  /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1647977021867-7c5adf366da6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+
+
+.fotos{
+
+  margin: 0 10vw;
+
+}
+
+  .foto1{
+    grid-area: foto1;
+  }
+
+    .foto2{
+    grid-area: foto2;
+  }
+
+
+      .foto3{
+    grid-area: foto3;
+  }
+
+        .foto4{
+    grid-area: foto4;
+  }
+
+
+          .foto5{
+    grid-area: foto5;
+  }
+
+
+     .foto6{
+    grid-area: foto6;
+  }
+
+
+
+
+       .foto7{
+    grid-area: foto7;
+  }
+
+     .foto8{
+    grid-area: foto8;
+  }
+
+          .foto9{
+    grid-area: foto9;
+  }
+
+               .foto10{
+    grid-area: foto10;
+  }
+
+
+               .foto11{
+    grid-area: foto11;
+  }
+
+                  .foto12{
+    grid-area: foto12;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 901px)  {
+
+.fotos{
+
+  margin: 0 10vw;
+
+  display: grid;
+    grid-template-areas:
+                                "foto1 foto2 foto3 foto4"
+                                "foto5 foto6 foto7 foto8"
+                              "foto9 foto10 foto11 foto12";
+     padding: 10px;
+
+    gap: 10px;
+
+
+    background-color: lightblue;
+  
+
+    }
+
+
+
+
+
+    .anim{
+        margin: 10px;
+         display: grid;
+             padding: 10px;
+
+    gap: 10px;
+    background-color: lightblue;
+        justify-content: center;
+        justify-items: center;
+
+
+    }
+
+    .imgAnm1{
+
+          border-radius: 50%;
+
+  /* experimente a animação roda-encolhe */
+  animation-name: roda;
+  animation-duration: 2s;
+  /* para a animação nunca parar */
+  animation-iteration-count: infinite;
+  /* por defeito acelera no inicio e desacelera no fim. aqui fica uniforme */
+  animation-timing-function: linear;
+    }
+
+    @keyframes roda {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+
+
+
+
+        .imgAnm2{
+
+          border-radius: 50%;
+
+  /* experimente a animação roda-encolhe */
+  animation-name: example;
+  animation-duration: 4s;
+  /* para a animação nunca parar */
+  animation-iteration-count: infinite;
+  /* por defeito acelera no inicio e desacelera no fim. aqui fica uniforme */
+  animation-timing-function: linear;
+            position: relative;
+    }
+
+
+        @keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:20px; top:0px;}
+  50%  {background-color:blue; left:20px; top:20px;}
+  75%  {background-color:green; left:0px; top:20px;}
+  100% {background-color:red; left:0px; top:0px;}
+
+
+
+}
+    .imgAnm3{
+
+          border-radius: 50%;
+
+  /* experimente a animação roda-encolhe */
+  animation-name: roda-encolhe;
+  animation-duration: 4s;
+  /* para a animação nunca parar */
+  animation-iteration-count: infinite;
+  /* por defeito acelera no inicio e desacelera no fim. aqui fica uniforme */
+  animation-timing-function: linear;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animação */
+@keyframes roda-encolhe {
+  0% {transform: rotate(360deg); width: 200px;}
+  50% {transform: rotate(180deg);  width: 100px;}
+  100% {transform: rotate(0deg);  width: 200px;}
+}
+
+
+
+
+
+
+
+
+
+.contendorAnim{
+
+      display:grid;
+ grid-template-areas: "foto1 foto2"
+                        "foto3 foto4";
+  grid-column-gap: 2px;
+  grid-row-gap: 20px;
+padding: 4px;
+
+}
+
+
+
+@media (max-width: 900px)  {
+
+.fotos{
+
+
+  margin: 0 10vw;
+
+  display: grid;
+    grid-template-areas:
+                                "foto1 foto2 foto3 foto4 foto5 foto6"
+                                "foto7 foto8 foto9 foto10 foto11 foto12 ";
+     padding: 5px;
+
+    gap: 5px;
+    background-color: lightblue;
+
+    }
+
+
+}
+
+
+@media (max-width: 600px)  {
+
+.fotos{
+
+  margin: 0 10vw;
+
+  display: grid;
+    grid-template-areas:
+                                "foto1"
+                                "foto2"
+                                "foto3"
+                                "foto4"
+                                "foto5"
+                                "foto6"
+                                "foto7"
+                                "foto8"
+                                "foto9"
+                                "foto10"
+                                "foto11"
+                                "foto12" ;
+
+     padding: 5px;
+
+    gap: 5px;
+    background-color: lightblue;
+
+    }
+
+
+}
+
+.slidein {
+      border-radius: 50%;
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left:100%;
+    width:120%
+  }
+
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
+
+.whited{
+     position: relative;
+}
+
+.whited img{
+
+
+
+
+
+
+
+}
+
+
+.whited p{
+    opacity: 0;
+     transform: scale(0);
+
+
+
+}
+
+.whited:hover img{
+    opacity: 0.3;
+    transition: opacity 1s;
+
+background: white;
+}
+
+.whited:hover p{
+    opacity: 1;
+    transform: scale(1);
+
+        position: absolute;
+
+  color: white;
+font-weight: bold;
+
+    font-size: large;
+
+font-family: 'Secular One', sans-serif;
+
+  bottom: 30px;
+  left: 20px;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

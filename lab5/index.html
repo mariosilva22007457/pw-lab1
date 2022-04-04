@@ -34,11 +34,20 @@ font-family: Ubuntu, sans-serif;
 
 .capitais {
     display: flex;
-    background-color: lightblue;
+   background-image: url("https://images.unsplash.com/photo-1567449394808-405b4fac58e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     padding: 50px;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center ;
+
+      min-height: 200px;
+
+      background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
 
 }
 
@@ -127,8 +136,19 @@ font-size: 4rem;
 .dicas{
 display: flex;
      flex-wrap: wrap;
-    background-color: lightblue;
+
       justify-content:center;
+
+      background-image: url("https://images.unsplash.com/photo-1647977021867-7c5adf366da6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 
@@ -147,6 +167,7 @@ display: flex;
          align-items: center;
     flex-wrap: wrap;
      justify-content: space-around;
+
 
 }
 
@@ -205,7 +226,7 @@ display: grid;
     padding: 15px;
     margin: 7px;
     gap: 10px;
-    background-color: lightblue;
+
 
     }
 
@@ -247,9 +268,9 @@ display: grid;
   background-color: lightgray;
   border: none;
   color: black;
-  padding: 15px 32px;
+  padding: 10px 22px;
   right: 60px;
-    bottom: -20px;
+    bottom: -40px;
   text-decoration: none;
   display: flex;
   font-size: 16px;
@@ -257,6 +278,7 @@ display: grid;
   cursor: pointer;
 
 }
+
 
 
     .img2 {
@@ -356,8 +378,19 @@ display: grid;
 .dicas{
 display: flex;
      flex-wrap: wrap;
-    background-color: lightblue;
+
       justify-content:center;
+
+      background-image: url("https://images.unsplash.com/photo-1647977021867-7c5adf366da6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+
+  /* Set a specific height */
+  min-height: 200px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 
@@ -493,14 +526,19 @@ font-family: 'Secular One', sans-serif;
   position: relative;
  font-family: 'Secular One', sans-serif;
 
-    color: white;
+
+
 }
 
 
 
 .header{
           position: sticky;
-          top: 0;
+   top: 0;
+     position: -webkit-sticky;
+  position: sticky;
+
+z-index: 99;
         }
 
 
@@ -550,7 +588,9 @@ font-family: 'Secular One', sans-serif;
     </h1>
 
 
-<div class="capitais">
+<div class="capitais"  >
+
+
 <div>
 
     <div><img src="images\bruxelas.avif" alt=""> </div>
@@ -669,9 +709,14 @@ font-family: 'Secular One', sans-serif;
 </div>
 
 
+
+
 </div>
 
 <br>
+
+
+
 
 
 
@@ -679,7 +724,10 @@ font-family: 'Secular One', sans-serif;
     Dicas Para Viajantes
 </h1>
 
+
+
 <div class="dicas">
+
     <div> <h1>  #1 Dica <i class="material-icons">book</i> </h1>
         <p> As horas de viagem passam mais facilmente na companhia de um livro ou de uma boa série. Decida que livro o irá acompanhar nesta aventura e descarregue a sua série preferida.  </p>
 
@@ -718,11 +766,13 @@ font-family: 'Secular One', sans-serif;
           <div> <h1>  #8 Dica <i class="material-icons">map</i> </h1>
         <p> Comece esta «pequena aventura» num país com uma cultura semelhante à sua, especialmente se for a sua primeira vez a viajar sozinho.    </p>
 
-    </div>
+
+         </div>
 
 
 
 </div>
+
 <br>
 
 <h1 id="C3">Destinos de Sonho </h1>
@@ -730,7 +780,9 @@ font-family: 'Secular One', sans-serif;
 <div class="destinos">
        <div class="item1">
        <div class="container">
- <div class="top-left">Natureza</div>
+
+    <div class="top-left">Natureza</div>
+
            <div class="bottom-left" >Açores</div>
            <div class="bottom-left2">Venha conhecer os Açores</div>
         <img src="images/acores.jpg" alt="error" >
@@ -784,14 +836,14 @@ font-family: 'Secular One', sans-serif;
     </div>
     <div class="item6">
 
-      <div> <img src="images/camping.jpg" alt="error">  </div>
+      <div> <img src="images/camping.jpg" alt="error" width="600px" height="500px">  </div>
 
 
         <div class="text" > <p class="texto_grande"> Orçamento limitado?</p>
 
         <p class="div_texto-paragrafo"> Encontre preços exclusivos com as nossas ofertas</p></div>
 
-        <div class="text"> <button class="button" > Ver Ofertas</button> </div>
+        <div class="text"> <button class="button"  > Ver Ofertas</button> </div>
 
     </div>
 
@@ -804,6 +856,156 @@ font-family: 'Secular One', sans-serif;
 </div>
 
 
+<div class="fotos">
+
+    <div class="whited">
+          <p> Martinho Hayden </p>
+        <img src="https://source.unsplash.com/A5rCN8626Ck/300x200">
+
+
+   </div>
+
+
+
+
+
+       <div class="whited">
+             <p>  Finbarr Baldwin  </p>
+       <img src="https://source.unsplash.com/yVUQlyRlJSw/300x200">
+
+
+    </div>
+
+
+
+       <div class="whited">
+           <p>  Elihu Noy  </p>
+       <img src="https://source.unsplash.com/M0AWNxnLaMw/300x200">
+
+
+    </div>
+
+
+       <div class="whited">
+             <p>  Sampath Stojan  </p>
+      <img src="https://source.unsplash.com/qtbV_8P_Ksk/300x200">
+
+
+    </div>
+
+       <div class="whited">
+             <p>  Peyton Vǫlundr   </p>
+       <img src="https://source.unsplash.com/O453M2Liufs/300x200">
+
+
+    </div>
+
+
+       <div class="whited">
+             <p>  Ariel Jayceon  </p>
+       <img src="https://source.unsplash.com/hpTH5b6mo2s/300x200">
+
+
+    </div>
+
+
+       <div class="whited">
+            <p>  Karan Vincent  </p>
+        <img src="https://source.unsplash.com/uq2E2V4LhCY/300x200">
+
+    </div>
+
+
+       <div class="whited">
+            <p>   Abraam Ranjit </p>
+      <img src="https://source.unsplash.com/tMzCrBkM99Y/300x200">
+
+
+    </div>
+
+
+       <div class="whited">
+             <p>  Joon Jasvinder  </p>
+        <img src="https://source.unsplash.com/hFXZ5cNfkOk/300x200">
+
+
+    </div>
+
+
+       <div class="whited">
+             <p>  Bjarni Theudhar  </p>
+     <img src="https://source.unsplash.com/okVXy9tG3KY/300x200">
+
+
+    </div>
+
+       <div class="whited">
+
+            <p>  Ira Arlo  </p>
+      <img src="https://source.unsplash.com/7tb-b37yHx4/300x200">
+
+
+    </div>
+
+       <div class="whited">
+           <p>   Konstantinos Yekonyah </p>
+   <img src="https://source.unsplash.com/1XLyzi17Z2M/300x200">
+
+    </div>
+
+
+
+    </div>
+<br>
+
+<div class="contendorAnim">
+
+<div class="anim">
+
+<img src="https://source.unsplash.com/random/200x200/?lights" class="imgAnm1">
+
+    
+
+
+
+</div>
+
+<div class="anim">
+
+<img src="https://source.unsplash.com/random/200x200/?light" class="imgAnm2">
+
+
+
+
+
+</div>
+
+
+<div class="anim">
+
+<img src="https://source.unsplash.com/random/200x200/?lightning" class="imgAnm3">
+
+
+
+
+
+</div>
+
+
+<div class="anim">
+
+<img src="https://source.unsplash.com/random/200x200/?thunder" class="slidein">
+
+
+
+
+
+</div>
+
+
+
+
+</div>
 
 
 
