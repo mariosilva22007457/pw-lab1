@@ -1,15 +1,69 @@
 <!DOCTYPE html>
+{% extends 'portfolio/layout.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>Projetos</title>
 </head>
 <body>
-{% extends 'portfolio/layout.html' %}
+
 
 {% block main %}
-	<h3>Titulo</h3>
-    <p>texto texto texto texto texto texto texto </p>
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/projetos.css' %}"/>
+
+
+
+
+
+    <h1 div style="text-align:center">Projetos</h1>
+
+<div class="container">
+  <div>
+
+    <h2 style="margin-bottom:0.30cm;" >Reverberation model and Geo Space Processing(Python) </h2>
+
+    <h5 style="margin-bottom:0.30cm;">Modelo de reverberação de uma sala de orquestra </h5>
+
+    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
+
+    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Python </h4>
+
+    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mj25200/Reverberation-model-and-Geo-Space-Processing-Python-" target="_blank"> Reverberation Model  </a> </h4>
+
+
+  </div>
+
+  <div>
+    <h2 style="margin-bottom:0.30cm;">Telegram Bot(Python) </h2>
+    <h5 style="margin-bottom:0.30cm;">Bot de Telegram </h5>
+    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
+    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Python </h4>
+    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mj25200/PythonBots" target="_blank"> Um bot de Telegram </a> </h4>
+
+  </div>
+
+
+
+  <div>
+    <h2 style="margin-bottom:0.30cm;">Car Racing on a track (Python) </h2>
+    <h5 style="margin-bottom:0.30cm;">Carro numa pista(imagem) </h5>
+    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
+    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Python </h4>
+    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mj25200/Race-Car-Python" target="_blank"> Carro numa pista</a> </h4>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
 {% endblock %}
 
 </body>

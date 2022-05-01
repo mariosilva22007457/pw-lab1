@@ -7,7 +7,14 @@
 
 header {
   height: 10vh;
-  background: purple;
+  background-image: url('../images/giphy.gif') ;
+
+ background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+
+
   color: white;
   top: 0;
 
@@ -50,4 +57,5 @@ footer {
   padding: 0 2vw;
   align-items: center;
 }
+
 
