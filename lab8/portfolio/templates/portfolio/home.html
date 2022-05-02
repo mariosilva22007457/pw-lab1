@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 {% extends 'portfolio/layout.html' %}
 <html lang="en">
+
+
+
+
 <head>
        {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
     <meta charset="UTF-8">
         <title>Home</title>
 
+
+
+
 </head>
 <body>
 {% block main %}
-	<h3>Casa</h3>
-    <p>Pagina Principal </p>
 
-     {% load static %}
-<img class="" src="{% static 'portfolio/images/kosmos-sistema-kosmonavt.jpg' %}" alt="">
+<div class="container1" style=" overflow: hidden;">
+
+
+
+
+
+ {% load static %}
+        <img src="{%  static 'portfolio/images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif' %}" alt=""/>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
 {% endblock %}
-
-<main>
-
-</main>
 </body>
 </html>

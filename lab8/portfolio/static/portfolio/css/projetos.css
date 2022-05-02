@@ -1,35 +1,51 @@
 .container {
-  background-color: rgb(238, 248, 248);
+
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 25px 100px;
-   background-image: url("https://images.unsplash.com/photo-1567449394808-405b4fac58e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 
-    flex-flow: row wrap;
+    background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+   flex-wrap: wrap;
 
-    align-items: center ;
 
-      min-height: 200px;
-      background-attachment: fixed;
+
+
+
+        min-height: 200px;
+
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-}
-
-.container div {
-  float: left;
-  width: 300px;   height: 300px;
-  padding: 25px;  margin: 10px;
-  background-color: white;
-  border-radius: 10px;                 /* arredonda os cantos */
-  box-shadow: 5px 5px 15px grey;
-
-
 
 
 }
+
+.container  div {
+      width: 350px;
+    height: 300px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 12px;
+            padding: 10px 20px;
+            background-color: whitesmoke;
+            margin: 25px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+
+
+
+}
+
+
+
+
+
+
 
 .after-box {
   clear: left;
@@ -37,7 +53,7 @@
 }
 
 main {
-  height: 85vh;
+  height: 50vh;
   background-color:rgb(238, 248, 248);
   padding: 4em 4em;
 }
@@ -46,23 +62,21 @@ main {
  margin-left: 2.5em
 }
 
-
-
-
-
-.container img{
-    border-radius: 20px 0 0 20px;
-    height: 100%;
-}
-
-.container div div:last-child{
-    width: 150px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 0 20px 20px 0;
-
+.parallax{
+      min-height: 200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+     flex-wrap: wrap;
+
+      justify-content:center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
+
+
+
 

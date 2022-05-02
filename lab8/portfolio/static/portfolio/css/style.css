@@ -13,7 +13,7 @@ header {
 background-position: center center;
 background-attachment: fixed;
 background-size: cover;
-
+position: sticky;
 
   color: white;
   top: 0;
@@ -51,11 +51,23 @@ main {
 }
 
 footer {
-  height:5vh;
-  display:flex;
-  justify-content: flex-end;
-  padding: 0 2vw;
-  align-items: center;
-}
+  /* definindo altura e cor */
+  height: 10vh;
+  background-image: url('../images/giphy.gif') ;
 
+ background-repeat: no-repeat;
+background-position: center center;
+background-attachment: fixed;
+background-size: cover;
+
+
+  color: white;
+  bottom: 0;
+
+  /* alinhando logo e menu */
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
 
