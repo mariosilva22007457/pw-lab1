@@ -4,20 +4,44 @@ img *{
   overflow: hidden;
 }
 
-.container1 {
+
+
+
+body{
+ background-repeat: no-repeat;
+
+background-attachment: fixed;
+background-size: cover;
+  background-image: url('../images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif');
+    background-position: center;
+        height: 100%;
+        width: 100%;
+}
+
+        .textomt_grande{
+ position:   relative;
+    color: White;
+            display: flex;
+            text-align: center;
+
+
+
+
+    font-family: 'Alfa Slab One', cursive;
+
+            justify-content: center;
+            align-items: center;
+     font-size: 8vmin;
+}
+
+        .container1 {
   position: relative;
   text-align: center;
   color: white;
 }
-
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-body{
-  overflow: hidden;
-  background-image: url('../images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif');
 }

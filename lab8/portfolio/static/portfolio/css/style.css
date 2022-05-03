@@ -17,6 +17,7 @@ position: sticky;
 
   color: white;
   top: 0;
+  z-index: 99;
 
   /* alinhando logo e menu */
   display:flex;
@@ -44,11 +45,6 @@ nav a {
 }
 
 
-main {
-  height: 85vh;
-  background-color:grey;
-  padding: 4em 4em;
-}
 
 footer {
   /* definindo altura e cor */
@@ -69,5 +65,6 @@ background-size: cover;
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  z-index: 99;
 }
 
