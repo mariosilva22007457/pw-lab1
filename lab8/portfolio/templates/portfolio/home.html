@@ -1,33 +1,31 @@
-<!DOCTYPE html>
+
 {% extends 'portfolio/layout.html' %}
-<html lang="en">
 
-
-
-
-<head>
-       {% load static %}
+{block style %}
+    {%  load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
-    <meta charset="UTF-8">
-        <title>Home</title>
 
+{ endblock style %}
 
-
-
-</head>
-<body>
 {% block main %}
+        <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+">
 
-<div class="container1" style=" overflow: hidden;">
+<div class="container1" >
 
 
 
+<div class="backText">
+
+    <h1 class="titulo">
+
+        Software Developer!
+    </h1>
 
 
- {% load static %}
-        <img src="{%  static 'portfolio/images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif' %}" alt=""/>
-         <div class="centered">Centered</div>
 
+</div>
 
 
 
@@ -37,10 +35,12 @@
 
 
 
+<div class="parallax2">
 
 
 
+</div>
 
 
-{% endblock %}
-</body>
+
+{% endblock main %}

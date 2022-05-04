@@ -7,41 +7,52 @@ img *{
 
 
 
-body{
- background-repeat: no-repeat;
-
-background-attachment: fixed;
-background-size: cover;
-  background-image: url('../images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif');
-    background-position: center;
-        height: 100%;
-        width: 100%;
-}
-
-        .textomt_grande{
- position:   relative;
-    color: White;
-            display: flex;
-            text-align: center;
-
-
-
-
-    font-family: 'Alfa Slab One', cursive;
-
-            justify-content: center;
-            align-items: center;
-     font-size: 8vmin;
-}
 
         .container1 {
-  position: relative;
-  text-align: center;
-  color: white;
+position: absolute;
+            min-height: 500px;
+
+            background-image: url('../images/68747470733a2f2f692e696d6775722e636f6d2f315a76566b44632e676966 (1).gif');
+
+  background-position: center;
+  background-repeat: no-repeat;
+ width: 100%;
+    height: 100%;
+ padding-left: 50px;
+    padding-top: 75px;
+
+background-attachment: fixed;
+
+  background-size: cover;
+
+
+    top: 0;
+    left: 0;
+
 }
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+
+
+.titulo{
+      position: absolute;
+    top: 80px;
+    right: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 72px;
+
+
 }
+
+.parallax2{
+     background-image: url('../images/anas-alshanti-feXpdV001o4-unsplash.jpg');
+ height: 1000px;
+}
+
+
+
+.backText{
+      position: relative;
+}
+
+
