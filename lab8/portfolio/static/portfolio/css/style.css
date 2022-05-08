@@ -48,22 +48,38 @@ nav a {
 
 footer {
   /* definindo altura e cor */
-  height: 10vh;
+
   background-image: url('../images/giphy.gif') ;
 
+clear:both;
  background-repeat: no-repeat;
 background-position: center center;
 background-attachment: fixed;
 background-size: cover;
 
 
-  color: white;
-  bottom: 0;
 
-  /* alinhando logo e menu */
+   width:100%;
+
+  color: white;
+
+
+
   display:flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  z-index: 99;
+
+
+
+   position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  z-index: 98;
 }
+
+* {
+    margin: 0;
+}
+

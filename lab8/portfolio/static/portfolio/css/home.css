@@ -44,9 +44,22 @@ background-attachment: fixed;
 
 }
 
+
+
+.titulo2{
+      position: absolute;
+    top: 200px;
+    right: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+
+}
+
 .parallax2{
-     background-image: url('../images/anas-alshanti-feXpdV001o4-unsplash.jpg');
- height: 1000px;
+     background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+ height: 2000px;
 }
 
 
@@ -55,4 +68,14 @@ background-attachment: fixed;
       position: relative;
 }
 
+.titulo3{
+      position: absolute;
+    top: 900px;
+    right: 270px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+
+}
 

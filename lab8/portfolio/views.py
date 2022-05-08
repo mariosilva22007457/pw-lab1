@@ -32,9 +32,22 @@ def competencias_view(request):
     return render(request, 'portfolio/competencias.html')
 
 
-def formacao_view(request):
-    return render(request, 'portfolio/formação.html')
+def educação_view(request):
+    return render(request, 'portfolio/educação.html')
 
 
 def projetos_view(request):
     return render(request, 'portfolio/projetos.html')
+
+
+def licenciatura_view(reuqest):
+    return render(reuqest, 'portfolio/licenciatura.html'
+
+                  )
+
+
+def blog_view(request):
+    return render(request, 'portfolio/blog.html')
+
+def web_view(reuqest):
+    return render(reuqest, 'portfolio/web.html')

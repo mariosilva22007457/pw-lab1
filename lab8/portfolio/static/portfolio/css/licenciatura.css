@@ -1,8 +1,9 @@
 .container {
 
   display: flex;
+    position: relative;
 
-    background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
+    background-image: url('../images/home-ce-610.jpg');
    flex-wrap: wrap;
 
 
@@ -41,12 +42,24 @@
 
 }
 
+body{
+    background-image: url('../images/2177753.png');
+}
 
 
 
+h1{
+    color: azure;
+
+}
+h2{
+    color: azure;
+}
 
 
-
+.estrelas{
+    color:gold;
+}
 
 
 main {

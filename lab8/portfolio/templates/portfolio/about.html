@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    <title>About me</title>
 </head>
 
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
-	<h3>Titulo</h3>
-    <p>texto texto texto texto texto texto texto </p>
+
+
+<br>
+    <br>
+     <a class="linkz" href="{% url 'portfolio:educação' %}">Educação</a>
+      <a class="linkz" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
 {% endblock %}
 
 
