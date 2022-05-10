@@ -67,6 +67,9 @@ background-attachment: fixed;
 .backText{
       position: relative;
 }
+.backText2{
+    position: relative;
+}
 
 .titulo3{
       position: absolute;

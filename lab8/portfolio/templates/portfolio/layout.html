@@ -2,58 +2,58 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
+    <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
 ">
     {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
 
 
     <style type="text/css">
 
         .menu  div{
-    display: flex;
+            display: flex;
 
 
- }
+        }
 
-.menu a:last-child{
-    margin-left: auto;
-
-
-}
+        .menu a:last-child{
+            margin-left: auto;
 
 
-.linkz {
-    padding: 20px;
-    text-decoration: none;
-  background-color: dodgerblue;
-  margin: 2px;
-  color: whitesmoke;
-  box-shadow: 2px 3px 3px crimson;
-  border-radius: 10px;
-
-}
-
-.nav-menu{
-
-    display:flex;
-    height: 10%;
+        }
 
 
-}
+        .linkz {
+            padding: 20px;
+            text-decoration: none;
+            background-color: dodgerblue;
+            margin: 2px;
+            color: whitesmoke;
+            box-shadow: 2px 3px 3px crimson;
+            border-radius: 10px;
 
-nav a:hover{
-  background-color: lightgray;
-   font-weight: bold;
-}
+        }
+
+        .nav-menu{
+
+            display:flex;
+            height: 10%;
+
+
+        }
+
+        nav a:hover{
+            background-color: lightgray;
+            font-weight: bold;
+        }
 
     </style>
     <title>Pagina Inicial</title>
 </head>
 <body>
 <header >
-<div>   <h2>Mário Malta Silva</h2>  </div>
+    <div>   <h2>Mário Malta Silva</h2>  </div>
 
     <div class="menu">
 
@@ -63,28 +63,34 @@ nav a:hover{
 
 
             <br>
-  <a class="linkz" href="{% url 'portfolio:home' %}">Home</a>
-  <a class="linkz" href="{% url 'portfolio:apresentação' %}">Apresentação</a>
-  <a class="linkz" href="{% url 'portfolio:competencias' %}">Competencias</a>
-  <a class="linkz" href="{% url 'portfolio:projetos' %}">Projetos</a>
+            <a class="linkz" href="{% url 'portfolio:home' %}">Home</a>
+            <a class="linkz" href="{% url 'portfolio:home' %}#welcome">Apresentação</a>
+            <a class="linkz" href="{% url 'portfolio:formacao' %}">Formação</a>
+            <a class="linkz" href="{% url 'portfolio:contacto' %}">Contacto</a>
+            <a class="linkz" href="{% url 'portfolio:projetos' %}">Projetos</a>
             <a class="linkz" href="{% url 'portfolio:blog' %}">Blog</a>
             <a class="linkz" href="{% url 'portfolio:web' %}">Web</a>
-            <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:about' %}">About Me</a>
+            <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:home' %}#aboutMe">About Me</a>
+            <a class="linkz" style="margin-left: auto" href="{% url 'portfolio:login' %}">Login</a>
 
-    </nav>
+        </nav>
 
-         </div>
+    </div>
 
 </header>
 {% block main %}
-	{% endblock main %}
+{% endblock main %}
+
+<div id="contacto1">
 
 
-    <footer  >
+
+</div>
+<footer  >
 
 
-        <div class="center" >@ ULHT 2022</div>
-    </footer>
+    <div class="center" >@ ULHT 2022</div>
+</footer>
 </body>
 </html>
 

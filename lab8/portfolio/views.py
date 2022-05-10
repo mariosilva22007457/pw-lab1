@@ -8,8 +8,7 @@ def index_view(request):
     return render(request, 'portfolio/layout.html')
 
 
-def about_view(request):
-    return render(request, 'portfolio/about.html')
+
 
 
 def home_view(request):
@@ -24,16 +23,14 @@ def home_view(request):
     return render(request, 'portfolio/home.html', context)
 
 
-def apresentacao_view(request):
-    return render(request, 'portfolio/apresentação.html')
 
 
-def competencias_view(request):
-    return render(request, 'portfolio/competencias.html')
+def contacto_view(request):
+    return render(request, 'portfolio/contacto.html')
 
 
-def educação_view(request):
-    return render(request, 'portfolio/educação.html')
+def educacao_view(request):
+    return render(request, 'portfolio/educacao.html')
 
 
 def projetos_view(request):
@@ -45,9 +42,12 @@ def licenciatura_view(reuqest):
 
                   )
 
-
 def blog_view(request):
     return render(request, 'portfolio/blog.html')
 
 def web_view(reuqest):
     return render(reuqest, 'portfolio/web.html')
+def login_view(request):
+    return render(request, 'portfolio/login.html')
+def formacao_view(request):
+    return render(request, 'portfolio/formação.html')
