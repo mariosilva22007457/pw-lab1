@@ -9,14 +9,32 @@
 { endblock style %}
 
 {% block main %}
-        <meta charset="UTF-8" name="viewport"  content="width=device-width,initial-scale=1.0
-">
+<div class="container">
+    <div class="divRetangulos">
 
-<div  >
+        <a href="{% url 'portfolio:novo' %}" >Criar Post</a>
+
+        {% for blog_post in blog_posts %}
+
+            <div class="">
+                <p>{{blog_post.titulo}}</p>
+
+                <p>{{blog_post.descricao}}</p>
+
+                {% if blog_post.image %}
+                   <img src="{{ blog_post.image.url|default_if_none:'#' }}" class="post_img" alt=""/>
+                {% endif %}
+
+
+                <p>{{blog_post.autor}} at {{blog_post.data}}<a href="{% url 'portfolio:edita'  blog_post.id %}">Editar</a></p>
+
+            </div>
 
 
 
+        {% endfor %}
 
+    </div>
 </div>
 
 

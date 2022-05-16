@@ -1,9 +1,16 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 import datetime
 
 
 # Create your views here.
+from django.urls import reverse
+
+from portfolio.froms import PostForm
+from portfolio.models import Post
+
+
 def index_view(request):
     return render(request, 'portfolio/layout.html')
 
@@ -25,9 +32,6 @@ def home_view(request):
 
 
 
-def contacto_view(request):
-    return render(request, 'portfolio/contacto.html')
-
 
 def educacao_view(request):
     return render(request, 'portfolio/educacao.html')
@@ -43,7 +47,8 @@ def licenciatura_view(reuqest):
                   )
 
 def blog_view(request):
-    return render(request, 'portfolio/blog.html')
+    context = {'blog_posts': Post.objects.all()}
+    return render(request, 'portfolio/blog.html',context)
 
 def web_view(reuqest):
     return render(reuqest, 'portfolio/web.html')
@@ -51,3 +56,26 @@ def login_view(request):
     return render(request, 'portfolio/login.html')
 def formacao_view(request):
     return render(request, 'portfolio/formação.html')
+
+
+def nova_post_view(request):
+    form = PostForm(request.POST or None, request.FILES)
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:blog'))
+
+    context = {'form': form}
+
+    return render(request, 'portfolio/nova.html', context)
+
+
+def edita_post_view(request, blog_post_id):
+    post = Post.objects.get(id=blog_post_id)
+    form = PostForm(request.POST or None, request.FILES, instance= post)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('portfolio:blog'))
+
+    context = {'form': form, 'blog_post_id': blog_post_id}
+    return render(request, 'portfolio/edita.html', context)

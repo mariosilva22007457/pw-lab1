@@ -10,5 +10,12 @@
       <jdbc-url>jdbc:sqlite:C:\Users\Mj\OneDrive - Grupo Lusofona\2º Ano\2º Semestre\Programação Web\Práticas\pw-labs-mariosilva-a22007457\lab8\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="db" uuid="cb6fa97d-3e51-429c-bea0-63cc1733d288">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\MJ\OneDrive - Grupo Lusofona\2º Ano\2º Semestre\Programação Web\Práticas\pw-labs-mariosilva-a22007457\lab8\db.sqlite3</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
