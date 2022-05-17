@@ -48,6 +48,9 @@ def blog_view(request):
 def web_view(reuqest):
     return render(reuqest, 'portfolio/web.html')
 
+def quizz_view(request):
+    return render(request, 'portfolio/Quizz.html')
+
 
 def login_view(request):
     return render(request, 'portfolio/login.html')

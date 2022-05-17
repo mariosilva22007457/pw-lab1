@@ -17,6 +17,7 @@ urlpatterns = [
     path('login',views.login_view, name='login'),
     path('novo', views.nova_post_view, name ='novo'),
     path('edita/<int:blog_post_id>', views.edita_post_view, name='edita'),
-    path('apaga/<int:blog_post_id>',views.apaga_post_view, name='apaga')
+    path('apaga/<int:blog_post_id>',views.apaga_post_view, name='apaga'),
+    path('quizz', views.quizz_view, name='quizz')
 
 ]
