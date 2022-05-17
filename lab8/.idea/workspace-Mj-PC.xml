@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a2aaaec-64fa-4023-b569-36e7ad8dd230" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/models.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28ZEJlsKEHDUnvh8JpU1AbzH7Vo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MJ/OneDrive - Grupo Lusofona/2º Ano/2º Semestre/Programação Web/Práticas/pw-labs-mariosilva-a22007457/lab8&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Debugger&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mj\OneDrive - Grupo Lusofona\2º Ano\2º Semestre\Programação Web\Práticas\pw-labs-mariosilva-a22007457\lab8\portfolio\static\portfolio\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mj\OneDrive - Grupo Lusofona\2º Ano\2º Semestre\Programação Web\Práticas\pw-labs-mariosilva-a22007457\lab8\portfolio" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="lab8" type="Python.DjangoServer" factoryName="Django server">
+      <module name="lab8" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a2aaaec-64fa-4023-b569-36e7ad8dd230" name="Changes" comment="" />
+      <created>1651415637398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651415637398</updated>
+      <workItem from="1651415638632" duration="3420000" />
+      <workItem from="1651419141510" duration="141000" />
+      <workItem from="1651419667329" duration="8821000" />
+      <workItem from="1651512116763" duration="5438000" />
+      <workItem from="1651524504528" duration="6044000" />
+      <workItem from="1651567040975" duration="986000" />
+      <workItem from="1651568550290" duration="847000" />
+      <workItem from="1651572785109" duration="3439000" />
+      <workItem from="1651612182908" duration="2675000" />
+      <workItem from="1651617048695" duration="1477000" />
+      <workItem from="1651655103237" duration="6586000" />
+      <workItem from="1651685664078" duration="1199000" />
+      <workItem from="1651765834670" duration="1261000" />
+      <workItem from="1651946447675" duration="4525000" />
+      <workItem from="1651962958546" duration="4645000" />
+      <workItem from="1652019813641" duration="2856000" />
+      <workItem from="1652110118284" duration="2313000" />
+      <workItem from="1652112467883" duration="2877000" />
+      <workItem from="1652116103287" duration="1614000" />
+      <workItem from="1652216324114" duration="156000" />
+      <workItem from="1652216483615" duration="3026000" />
+      <workItem from="1652260455512" duration="2760000" />
+      <workItem from="1652264926330" duration="487000" />
+      <workItem from="1652265431633" duration="1285000" />
+      <workItem from="1652269765760" duration="90000" />
+      <workItem from="1652610550078" duration="860000" />
+      <workItem from="1652612579910" duration="410000" />
+      <workItem from="1652628735882" duration="597000" />
+      <workItem from="1652636106391" duration="611000" />
+      <workItem from="1652706962067" duration="2829000" />
+      <workItem from="1652711551923" duration="713000" />
+      <workItem from="1652712284813" duration="189000" />
+      <workItem from="1652712561413" duration="2118000" />
+      <workItem from="1652714710486" duration="832000" />
+      <workItem from="1652715565827" duration="6966000" />
+      <workItem from="1652723562982" duration="345000" />
+      <workItem from="1652724045429" duration="694000" />
+      <workItem from="1652724759400" duration="162000" />
+      <workItem from="1652724936423" duration="50000" />
+      <workItem from="1652725179551" duration="1232000" />
+      <workItem from="1652789639225" duration="103000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

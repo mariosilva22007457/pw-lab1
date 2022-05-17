@@ -4,7 +4,7 @@
 {block style %}
     {%  load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
-
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blog.css' %}"/>
 
 { endblock style %}
 
@@ -12,7 +12,7 @@
 <div class="container">
     <div class="divRetangulos">
 
-        <a href="{% url 'portfolio:novo' %}" >Criar Post</a>
+        <a href="{% url 'portfolio:novo' %}" >Create Post</a>
 
         {% for blog_post in blog_posts %}
 
@@ -26,7 +26,9 @@
                 {% endif %}
 
 
-                <p>{{blog_post.autor}} at {{blog_post.data}}<a href="{% url 'portfolio:edita'  blog_post.id %}">Editar</a></p>
+                <p>{{blog_post.autor}} at {{blog_post.data}}<a href="{% url 'portfolio:edita'  blog_post.id %}">Edit Post</a></p>
+            <br>
+
 
             </div>
 

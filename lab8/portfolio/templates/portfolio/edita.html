@@ -7,6 +7,7 @@
 
         <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancelar</a>
         <input type="submit" value="Gravar" class="btn btn-success" >
+    <a href="{% url 'portfolio:apaga' blog_post_id %}" role="button" class="btn btn-danger">Apagar</a>
     </form>
 
 {% endblock %}

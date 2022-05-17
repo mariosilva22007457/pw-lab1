@@ -3,7 +3,6 @@ from django.shortcuts import render
 
 import datetime
 
-
 # Create your views here.
 from django.urls import reverse
 
@@ -13,9 +12,6 @@ from portfolio.models import Post
 
 def index_view(request):
     return render(request, 'portfolio/layout.html')
-
-
-
 
 
 def home_view(request):
@@ -28,9 +24,6 @@ def home_view(request):
         'topicos': topicos,
     }
     return render(request, 'portfolio/home.html', context)
-
-
-
 
 
 def educacao_view(request):
@@ -46,14 +39,20 @@ def licenciatura_view(reuqest):
 
                   )
 
+
 def blog_view(request):
     context = {'blog_posts': Post.objects.all()}
-    return render(request, 'portfolio/blog.html',context)
+    return render(request, 'portfolio/blog.html', context)
+
 
 def web_view(reuqest):
     return render(reuqest, 'portfolio/web.html')
+
+
 def login_view(request):
     return render(request, 'portfolio/login.html')
+
+
 def formacao_view(request):
     return render(request, 'portfolio/formação.html')
 
@@ -71,7 +70,7 @@ def nova_post_view(request):
 
 def edita_post_view(request, blog_post_id):
     post = Post.objects.get(id=blog_post_id)
-    form = PostForm(request.POST or None, request.FILES, instance= post)
+    form = PostForm(request.POST or None, request.FILES, instance=post)
 
     if form.is_valid():
         form.save()
@@ -79,3 +78,8 @@ def edita_post_view(request, blog_post_id):
 
     context = {'form': form, 'blog_post_id': blog_post_id}
     return render(request, 'portfolio/edita.html', context)
+
+
+def apaga_post_view(request, blog_post_id):
+    Post.objects.get(id=blog_post_id).delete()
+    return HttpResponseRedirect(reverse('portfolio:blog'))

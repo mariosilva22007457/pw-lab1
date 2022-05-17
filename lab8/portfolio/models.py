@@ -1,5 +1,5 @@
-
 from django.db import models
+
 
 class Post(models.Model):
     autor = models.CharField(max_length=100)
@@ -8,9 +8,6 @@ class Post(models.Model):
     descricao = models.CharField(max_length=500)
     link = models.URLField(max_length=200, blank=True)
     image = models.ImageField(upload_to='media/', blank=True)
-
-
-
 
     def str(self):
         return f"{self.autor} no {self.data}, adicionou um {self.titulo} com a{self.descricao} e imagem {self.imagem}"
