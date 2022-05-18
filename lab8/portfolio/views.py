@@ -7,7 +7,7 @@ import datetime
 from django.urls import reverse
 
 from portfolio.froms import PostForm
-from portfolio.models import Post
+from portfolio.models import Post, PontuacaoQuizz
 
 
 def index_view(request):
@@ -48,6 +48,7 @@ def blog_view(request):
 def web_view(reuqest):
     return render(reuqest, 'portfolio/web.html')
 
+
 def quizz_view(request):
     return render(request, 'portfolio/Quizz.html')
 
@@ -86,3 +87,11 @@ def edita_post_view(request, blog_post_id):
 def apaga_post_view(request, blog_post_id):
     Post.objects.get(id=blog_post_id).delete()
     return HttpResponseRedirect(reverse('portfolio:blog'))
+
+
+def quizz(request):
+    if request.method == 'POST':
+        n = request.POST['nome']
+        p = PontuacaoQuizz(request),
+        r = PontuacaoQuizz(nome=n, pontuacao=p)
+        r.save()

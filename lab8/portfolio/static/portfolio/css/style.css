@@ -7,7 +7,7 @@
 
 header {
   height: 10vh;
-  background-image: url('../images/giphy.gif') ;
+  background: #0F1108;
 
  background-repeat: no-repeat;
 background-position: center center;
@@ -49,7 +49,8 @@ nav a {
 footer {
   /* definindo altura e cor */
 
-  background-image: url('../images/giphy.gif') ;
+
+  background: #0F1108;
 
 clear:both;
  background-repeat: no-repeat;

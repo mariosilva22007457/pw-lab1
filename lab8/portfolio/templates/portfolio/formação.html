@@ -8,10 +8,30 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block main %}
+
+
+            {%  load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/formacao.css' %}"/>
+
+
+
+
+
     <br>
     <br>
+    <div class="centrar">
+
      <a class="linkz" href="{% url 'portfolio:educacao' %}">Educação</a>
-      <a class="linkz" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+      <a   class="linkz" href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+    </div>
+
+    <div>
+   {%  load static %}  <img src="{% static "portfolio/images/banner3a.png" %}" alt="home" />
+
+    </div>
+
 
 {% endblock %}
 

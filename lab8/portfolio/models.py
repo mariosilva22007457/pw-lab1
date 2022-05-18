@@ -11,3 +11,11 @@ class Post(models.Model):
 
     def str(self):
         return f"{self.autor} no {self.data}, adicionou um {self.titulo} com a{self.descricao} e imagem {self.imagem}"
+
+
+class PontuacaoQuizz(models.Model):
+    nome = models.CharField(max_length=100)
+    pontuacao = models.IntegerField(max_length=20)
+
+    def __str__(self):
+        return f"{self.nome}  {self.pontuacao}"
