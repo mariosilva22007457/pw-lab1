@@ -1,19 +1,12 @@
 .container {
-
+position: relative;
   display: flex;
-    position: relative;
+align-content: center;
+        min-height: 300px;
 
     background-image: url('../images/home-ce-610.jpg');
    flex-wrap: wrap;
 
-
-
-
-
-        min-height: 300px;
-
-
-      justify-content:center;
 
   /* Create the parallax scrolling effect */
   background-attachment: scroll;
@@ -25,22 +18,27 @@
 
 }
 
-.container  div {
-      width: 450px;
-    height: 450px;
+.container div{
+          width: 500px;
+    height: 550px;
     box-shadow: 5px 5px 15px #888888;
             border-radius: 12px;
             padding: 10px 20px;
-            background-color: lightcyan;
+            background-color: burlywood;
             margin: 25px;
          align-items: center;
     flex-wrap: wrap;
      justify-content: space-around;
-
+    background-image: url('../images/4868953.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
 
 
 
 }
+
 
 body{
     background-image: url('../images/2177753.png');
@@ -87,8 +85,21 @@ main {
 
 }
 
+.centrarTexto {
 
- .centrar{display:block;text-align:center}
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    left: 0px;
+    margin-bottom: 20px;
+
+
+
+}
+
+
+
 
 
 

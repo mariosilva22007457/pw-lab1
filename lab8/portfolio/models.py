@@ -15,7 +15,7 @@ class Post(models.Model):
 
 class PontuacaoQuizz(models.Model):
     nome = models.CharField(max_length=100)
-    pontuacao = models.IntegerField(max_length=20)
+    pontuacao = models.IntegerField()
 
     def __str__(self):
         return f"{self.nome}  {self.pontuacao}"

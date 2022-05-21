@@ -89,6 +89,12 @@ main {
 
 
  .centrar{display:block;text-align:center}
+ .centrar2{display:block;text-align:center; padding-top: 30px}
 
+.centerImg {
+display: block;
+margin-left: auto;
+margin-right: auto
 
+}
 
