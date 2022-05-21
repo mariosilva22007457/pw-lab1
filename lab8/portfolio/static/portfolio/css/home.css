@@ -37,6 +37,13 @@ background-attachment: fixed;
 }
 
 
+.centrarContento2r{
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+
+
 
 .titulo{
       position: absolute;
@@ -64,7 +71,7 @@ background-attachment: fixed;
 
 .parallax2{
      background-image: url('../images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg');
- height: 3000px;
+ height: 3200px;
     background-attachment: fixed;
 
   background-size: cover;
@@ -75,7 +82,12 @@ background-attachment: fixed;
 
 .parallax3{
      background-image: url('../images/3124512.jpg');
- height: 1080px;
+ height: 2000px;
+        background-attachment: fixed;
+
+  background-size: cover;
+      background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -98,6 +110,13 @@ background-attachment: fixed;
 
 
 }
+.titulo4{
+          position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+
+}
 
 .centrartexto{
         text-align: center;
@@ -107,6 +126,24 @@ background-attachment: fixed;
     left: 0px;
     margin-bottom: 20px;
 }
+
+.centrartexto2{
+        text-align: center;
+    vertical-align: center;
+    position: absolute;
+
+    margin-bottom: 20px;
+}
+
+
+.center {
+
+display: flex;
+justify-content: center;
+}
+
+
+
 
 /* Button */
 
@@ -159,8 +196,25 @@ background-attachment: fixed;
             padding-bottom: 30px;
 }
 
+
+        .img2 {
+
+
+            padding-bottom: 30px;
+
+             display: block;
+  margin: 0 auto;
+}
+
+
         .card {
   width: 550px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+
+
+
+
+
+
