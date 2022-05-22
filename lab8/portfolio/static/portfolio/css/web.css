@@ -1,5 +1,5 @@
 
-.container2 {
+.containerweb {
 position: relative;
   display: flex;
 align-content: center;
@@ -14,6 +14,7 @@ align-content: center;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 
 
 
@@ -85,19 +86,6 @@ align-content: center;
    align-items:center;
 }
 
-.centrartexto5{
-        text-align: right;
-        margin-right: 180px;
-
-
-    position: relative;
-  width: 100%;
-
-
-    margin-bottom: 10px;
-    color: aliceblue;
-}
-
 
 
 
@@ -107,18 +95,22 @@ align-content: center;
     position: relative;
 }
 
-.container2 div{
+.containerweb div{
 
-          width: 900px;
-    height: 800px;
+          width: 550px;
+    height: 550px;
     box-shadow: 5px 5px 15px #888888;
             border-radius: 12px;
             padding: 10px 20px;
-            background-color: lightcyan;
+
             margin: 25px;
          align-items: center;
     flex-wrap: wrap;
      justify-content: space-around;
+
+       background-image: url('../images/depositphotos_14490301-stock-photo-highly-detailed-grunge-background.jpg');
+
+
 
 
 }
@@ -128,5 +120,11 @@ align-content: center;
   border-radius: 4px;
   padding: 5px;
   width: 736px;
+
+}
+
+p{
+    color: black;
+    font-weight: bolder;
 
 }
