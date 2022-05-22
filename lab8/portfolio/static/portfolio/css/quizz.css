@@ -1,9 +1,8 @@
 .container{
     display: block;
     background-size: 100% 100%;
-    background-color: seagreen;
+    background-color: aquamarine;
     background-position: center;
-    background-size: 100% 100%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -26,13 +25,13 @@
     box-shadow: 5px 2px 3px 7px black;
     border-radius: 10px;
     background-color: LightGray;
-    padding: 20px;
     margin: 7px;
     padding-left: 50px;
 }
 
 .btn{
     margin-top: 20px;
+    background: #3f51b5;
 }
 
 .divRetangulos div .graph{

@@ -20,11 +20,11 @@ def desenha_grafico_resultados(objetos):
     figuraOutput = plt.figure(figsize=(5, 5))
 
     # creating the bar plot
-    plt.bar(user, pontuacao, color='green',
+    plt.bar(pontuacao, user, color='blue',
             width=0.9)
 
-    plt.xlabel("Nome dos participantes")
-    plt.ylabel("Pontuação")
+    plt.ylabel("Nome dos participantes")
+    plt.xlabel("Pontuação")
     plt.title("Pontuação dos participantes!")
     plt.savefig('portfolio/static/portfolio/images/grafico_final.png')
 
@@ -33,18 +33,18 @@ def QuizzPontuacao(input):
     pontuacaoDaPessoa = 0
 
     if input.pergunta1 == "New Orleans":
-        pontuacaoDaPessoa += 4
+        pontuacaoDaPessoa += 5
 
-    if input.pergunta2 == "jogador de basebol":
-        pontuacaoDaPessoa += 4
+    if input.pergunta2 == "Jogador de basebol":
+        pontuacaoDaPessoa += 5
 
     if input.pergunta3 == "Livery Stable Blues":
-        pontuacaoDaPessoa += 4
+        pontuacaoDaPessoa += 5
 
     if input.pergunta4 == "Ella Fitzgerald":
-        pontuacaoDaPessoa += 4
+        pontuacaoDaPessoa += 5
 
-    if input.pergunta5 == "trumpete":
-        pontuacaoDaPessoa += 4
+    if input.pergunta5 == "Trompete":
+        pontuacaoDaPessoa += 5
 
     return pontuacaoDaPessoa

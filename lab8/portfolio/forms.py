@@ -45,7 +45,7 @@ class QuizzForm(ModelForm):
 
             'pergunta2': 'Que profissão usou o termo "Jazz" pela primeira vez? ',  #
 
-            'pergunta3': 'Qual foi o primeiro album de Jazz? comercial', #
+            'pergunta3': 'Qual foi o primeiro album comercial de Jazz? ', #
 
             'pergunta4': 'Quem é a rainha do Jazz?', #
 
@@ -55,3 +55,6 @@ class QuizzForm(ModelForm):
 
         }
 
+help_texts ={
+
+}
