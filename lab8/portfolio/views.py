@@ -6,8 +6,11 @@ import datetime
 # Create your views here.
 from django.urls import reverse
 
-from portfolio.froms import PostForm
+from portfolio.forms import PostForm
 from portfolio.models import Post, PontuacaoQuizz
+from .models import Quizz
+from .forms import QuizzForm
+from .funcQuizz import  desenha_grafico_resultados
 
 
 def index_view(request):
@@ -49,8 +52,7 @@ def web_view(reuqest):
     return render(reuqest, 'portfolio/web.html')
 
 
-def quizz_view(request):
-    return render(request, 'portfolio/Quizz.html')
+
 
 
 def login_view(request):
@@ -89,9 +91,18 @@ def apaga_post_view(request, blog_post_id):
     return HttpResponseRedirect(reverse('portfolio:blog'))
 
 
-def quizz(request):
-    if request.method == 'POST':
-        n = request.POST['nome']
-        p = PontuacaoQuizz(request),
-        r = PontuacaoQuizz(nome=n, pontuacao=p)
-        r.save()
+def quizz_view(request):
+
+    desenha_grafico_resultados(Quizz.objects.all())
+
+    form = QuizzForm(request.POST, use_required_attribute=False)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(request.path_info)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'portfolio/quizz.html', context)

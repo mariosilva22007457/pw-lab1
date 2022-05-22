@@ -7,10 +7,9 @@ class Post(models.Model):
     titulo = models.CharField(max_length=200)
     descricao = models.CharField(max_length=500)
     link = models.URLField(max_length=200, blank=True)
-    image = models.ImageField(upload_to='media/', blank=True)
 
     def str(self):
-        return f"{self.autor} no {self.data}, adicionou um {self.titulo} com a{self.descricao} e imagem {self.imagem}"
+        return f"{self.autor} no {self.data}, adicionou um {self.titulo} com a{self.descricao} e link {self.link}"
 
 
 class PontuacaoQuizz(models.Model):
@@ -19,3 +18,20 @@ class PontuacaoQuizz(models.Model):
 
     def __str__(self):
         return f"{self.nome}  {self.pontuacao}"
+
+
+class Quizz(models.Model):
+    nome = models.CharField(max_length=50)
+
+    pergunta1 = models.CharField(max_length=50)
+
+    pergunta2 = models.CharField(max_length=50)
+
+    pergunta3 = models.CharField(max_length=50)
+
+    pergunta4 = models.CharField(max_length=50)
+
+    pergunta5 = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.nome}"

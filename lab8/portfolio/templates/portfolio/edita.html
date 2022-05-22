@@ -1,13 +1,13 @@
 
 {% block main %}
-<h3>Tarefa</h3>
-    <form action="{% url 'portfolio:edita' blog_post_id %}" method="POST"  enctype="multipart/form-data">
+<h3>Edit your post here !</h3>
+    <form action="{% url 'portfolio:edita' blog_post_id %}" method="POST" >
         {% csrf_token %}
         {{ form.as_p }}
 
-        <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancelar</a>
+        <a href="{% url 'portfolio:blog' %}" role="button" class="btn btn-warning">Cancel</a>
         <input type="submit" value="Gravar" class="btn btn-success" >
-    <a href="{% url 'portfolio:apaga' blog_post_id %}" role="button" class="btn btn-danger">Apagar</a>
+
     </form>
 
 {% endblock %}

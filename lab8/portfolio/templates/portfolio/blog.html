@@ -2,32 +2,42 @@
 {% extends 'portfolio/layout.html' %}
 
 {block style %}
-    {%  load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/style.css' %}"/>
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blog.css' %}"/>
+{%  load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blogstyle.css' %}"/>
+
 
 { endblock style %}
 
 {% block main %}
-<div class="container">
+<div class="containerblog">
     <div class="divRetangulos">
 
-        <a href="{% url 'portfolio:novo' %}" >Create Post</a>
+        <a href="{% url 'portfolio:novo' %}" class="btn1">Create Post</a>
 
         {% for blog_post in blog_posts %}
 
-            <div class="">
+            <div >
+
+
                 <p>{{blog_post.titulo}}</p>
 
                 <p>{{blog_post.descricao}}</p>
-
-                {% if blog_post.image %}
-                   <img src="{{ blog_post.image.url|default_if_none:'#' }}" class="post_img" alt=""/>
+<br>
+                {% if blog_post.link %}
+                   <p>Link: <a href="{{blog_post.link}}">{{blog_post.link}}</a></p>
                 {% endif %}
 
+             <p>Data: {{blog_post.data}}</p>
 
-                <p>{{blog_post.autor}} at {{blog_post.data}}<a href="{% url 'portfolio:edita'  blog_post.id %}">Edit Post</a></p>
-            <br>
+
+
+
+            <a href="{% url 'portfolio:edita' blog_post.id %}" class="editar">Editar</a> <a href="{% url 'portfolio:apaga' blog_post.id %}" class="apagar">Apagar</a>
+
+
+
+
 
 
             </div>

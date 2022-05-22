@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import Post
+from .models import Post, Quizz
 
 
 class PostForm(ModelForm):
@@ -29,6 +29,29 @@ class PostForm(ModelForm):
 
     # texto auxiliar a um determinado campo do formulário
         help_texts = {
+
+        }
+
+class QuizzForm(ModelForm):
+    class Meta:
+        model = Quizz
+        fields = '__all__'
+
+        labels = {
+
+            'nome': 'Qual o seu nome?',
+
+            'pergunta1': 'Que cidade é considerada o berço do Jazz?',
+
+            'pergunta2': 'Que profissão usou o termo "Jazz" pela primeira vez? ',  #
+
+            'pergunta3': 'Qual foi o primeiro album de Jazz? comercial', #
+
+            'pergunta4': 'Quem é a rainha do Jazz?', #
+
+            'pergunta5': 'Que instrumento tocava Miles Davis? '
+
+
 
         }
 
