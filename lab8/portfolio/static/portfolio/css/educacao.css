@@ -3,7 +3,7 @@
 position: relative;
   display: flex;
 align-content: center;
-        min-height: 1000px;
+        min-height: 2000px;
 
     background-image: url('../images/1772247.jpg');
    flex-wrap: wrap;
@@ -17,6 +17,35 @@ align-content: center;
 
 
 
+}
+
+
+.centrartexto{
+        text-align: center;
+    vertical-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.centrartexto2{
+        text-align: center;
+
+
+    position: relative;
+  width: 100%;
+
+
+    margin-bottom: 5px;
+    color: aliceblue;
+}
+
+
+
+.textotras{
+    position: relative;
 }
 
 .container2 div{
