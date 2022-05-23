@@ -1,75 +1,97 @@
 .containerblog{
-position: relative;
+
   display: flex;
 align-content: center;
-        min-height: 3200px;
 
-    background-image: url('../images/pexels-pixabay-261579.jpg');
+
+    background-image: url('../images/1772247.jpg');
    flex-wrap: wrap;
 
+
+
+
+
+
+
+        min-height: 300px;
+
+
+      justify-content:center;
 
   /* Create the parallax scrolling effect */
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
-.divRetangulos{
-   display: grid;
-   grid-template-columns: repeat(1, 1fr);
-   grid-template-rows: repeat(1, 100px);
-   margin-top: 40px;
+.contendor{
+   position: relative;
+    top: 5%;
+    left: 5%;
+
+  margin-bottom: 20px;
+   margin-top: 20px;
    margin-left: 20px;
-   padding: 30px;
-   gap: 17px;
+   padding: 10px;
+   gap: 10px;
+
+               text-align: center;
+
+
+
+
+
 }
 
-.divRetangulos div{
-    width: 95%;
 
-    box-shadow: 5px 2px 3px 7px black;
-    border-radius: 10px;
-    background-color: LightGray;
-    padding: 20px;
-    margin: 7px;
+
+.contendor div{
+    width: 400px;
+    height: 400px;
+
+    background-image: url("../../portfolio/images/03a79ce9b715858f59e7e90d49a6dc8d.png");
+    background-size: cover;
+    padding-top: 50px;
+
+    margin: 30px;
+
 }
 
-.btn1{
-    background-color: #84f14e;
-    color: Black;
-    text-decoration: none;
+.btn {
+   margin-top: 20px;
+    background-color: #00bcd4;
+    text-decoration: aquamarine;
     border: 2px solid transparent;
     font-weight: bold;
-    border-radius: 30px;
-    transition: transform .7s;
-    margin-bottom: 5px;
-    padding-top: 35px;
-    text-align: center;
+    padding: 10px 25px;
+    border-radius: 10px;
+
+
+
 }
 
-.btn1:hover{
-    transform: scale(1.1);
+.btn:hover{
+    transform: scale(1.2);
 }
 
-.divRetangulos div p{
+.contendor div p{
     margin-left: 25px;
 }
 
-.divRetangulos div .editar{
-    margin-left: 95%;
+.contendor div .editar{
+    margin-left: 75%;
     color: tan;
 }
 
 
-.divRetangulos div .apagar{
-    margin-left: 95%;
+.contendor div .apagar{
+    margin-left: 75%;
     color: red;
 }
 
 
-.divRetangulos div p:nth-child(1){
+.contendor div p:nth-child(1){
     margin-left: 15px;
     font-size: 27px;
 }
@@ -80,6 +102,18 @@ align-content: center;
 }
 
 .divRetangulos div p:nth-child(3){
-    margin-left: 30px;
+    margin-left: 3px;
     font-size: 15px;
+}
+
+.centrartexto4{
+        text-align: center;
+
+
+    position: relative;
+  width: 100%;
+
+
+    margin-bottom: 5px;
+    color: aliceblue;
 }

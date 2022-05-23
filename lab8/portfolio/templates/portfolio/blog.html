@@ -11,13 +11,15 @@
     {%  load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blogstyle.css' %}">
 <div class="containerblog">
-    <div class="divRetangulos">
 
-        <a href="{% url 'portfolio:novo' %}" class="btn1">Create Post</a>
+
+    <div class="contendor">
+
+        <a href="{% url 'portfolio:novo' %}" class="btn">Create Post</a>
 
         {% for blog_post in blog_posts %}
 
-            <div >
+            <div  >
 
 
                 <p>{{blog_post.titulo}}</p>
@@ -28,7 +30,7 @@
                    <p>Link: <a href="{{blog_post.link}}">{{blog_post.link}}</a></p>
                 {% endif %}
 
-             <p>Data: {{blog_post.data}}</p>
+             <p>{{blog_post.data}}</p>
 
 
 
@@ -40,7 +42,9 @@
 
 
 
-            </div>
+
+
+             </div>
 
 
 
