@@ -10,7 +10,7 @@ from portfolio.forms import PostForm
 from portfolio.models import Post, PontuacaoQuizz
 from .models import Quizz
 from .forms import QuizzForm
-from .funcQuizz import  desenha_grafico_resultados
+from .funcQuizz import  draw_graph
 from .forms import Projetos
 from .models import Projetos
 
@@ -97,7 +97,7 @@ def apaga_post_view(request, blog_post_id):
 
 def quizz_view(request):
 
-    desenha_grafico_resultados(Quizz.objects.all())
+    draw_graph(Quizz.objects.all())
 
     form = QuizzForm(request.POST, use_required_attribute=False)
 
