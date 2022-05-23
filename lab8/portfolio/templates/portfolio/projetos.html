@@ -25,10 +25,12 @@
     <br>
     <h2 style="text-align:center">Projetos Pessoais</h2>
 
+
 <div class="container" >
 
 
   <div>
+
 
 
     <h3 style="margin-bottom:0.30cm;" >Reverberation model and Geo Space Processing(Python) </h3>
@@ -86,208 +88,71 @@
 
 
     <div class="container" >
-
+ {% for projeto in projetos %}
 
   <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" >Xadrez </h3>
+    <h3 style="margin-bottom:0.30cm;" >  Titulo:  {{projeto.titulo}}      </h3>
 
-    <h5 style="margin-bottom:0.30cm;">Jogo de Xadrez Feito em Kotlin da UC de FP </h5>
 
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Kotlin </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20FP" target="_blank"> Xadrez  </a> </h4>
+    <h5 style="margin-bottom:0.30cm;"> Descricão:    {{projeto.descricao}}           </h5>
+
+
+    <h4 style="margin-bottom:0.30cm;">  Participantes:   <a href="{{ projeto.participantes.linkedin }}" target="_blank" > {{ projeto.participantes }}</a> </h4>
+
+
+    <h4 style="margin-bottom:0.30cm;">  Tecnologias:      {{ projeto.tecnologias }}              </h4>
+
+
+    <h4 style="margin-bottom:0.30cm;"> Github:   <a href="{{projeto.github}}" target="_blank"> Click here </a> </h4>
+
+
+         <h4 style="margin-bottom:0.30cm;">  Ano: {{ projeto.ano}}   </h4>
+
+       <h4 style="margin-bottom:0.30cm;"> <a href="{{projeto.github}}" target="_blank"> <img src="{{ projeto.imagem.url }}" alt="error"> </a>   </h4>
+
          {% load static %}
 
 
 
   </div>
 
+          {% endfor %}
 
 
-      <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" >MineSweeper </h3>
 
-    <h5 style="margin-bottom:0.30cm;">Jogo deMineSweeper feito em C para a UC de LP1 </h5>
 
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: C </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20LP1" target="_blank"> MineSweeper  </a> </h4>
-         {% load static %}
 
 
 
-  </div>
 
 
-          <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" > Simulação de Lançamento de Projeteis </h3>
 
-    <h5 style="margin-bottom:0.30cm;">  Simulação de Lançamento de Projetos feito em Kotlin para a UC de Fundamentos de Física</h5>
 
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Kotlin </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20Fisica" target="_blank"> Simulação de Lançamento de Projeteis  </a> </h4>
-         {% load static %}
 
 
 
-  </div>
 
 
 
 
-          <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" >Microprocessador a Simular Sistema de Rega de Uma Horta </h3>
 
-    <h5 style="margin-bottom:0.30cm;">  Simulação de um sistema de rega feito em Assembly para a UC de Arquitetura de Computadores</h5>
 
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Assembly </h4>
 
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20AC" target="_blank"> Rega Horta </a> </h4>
-         {% load static %}
-
-
-
-  </div>
-
-
-              <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Portfolio CV</h3>
-
-    <h5 style="margin-bottom:0.30cm;"> Portfolio CV com base nos topicos da UC de Competências Comportamentais </h5>
-
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: HTML,CSS </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20CC/portfolio" target="_blank"> Portfolio CV </a> </h4>
-         {% load static %}
-
-
-
-  </div>
-
-
-
-              <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Base de Dados Musical</h3>
-
-    <h5 style="margin-bottom:0.30cm;"> Base de Dados Musical que permite pesquisar Musicas e Artistas por vários filtros feita em Java para a UC de AED </h5>
-
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva </a> </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Java </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20AED" target="_blank"> Base de Dados Musical </a> </h4>
-         {% load static %}
-
-
-
-  </div>
-
-
-
-              <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Base de Dados de Musicas</h3>
-
-    <h5 style="margin-bottom:0.30cm;"> Base de Dados Musical que permite pesquisar Musicas e Artistas por vários filtros feita em MySQL para a UC de Base de Dados </h5>
-
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva  </a> </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: MySQL </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20BD" target="_blank"> Base de Dados Musicas </a> </h4>
-         {% load static %}
-
-
-
-  </div>
-
-
-
-              <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Sistema de Simulação de Encomendas de Vacinas</h3>
-
-    <h5 style="margin-bottom:0.30cm;"> Sistema que permite simular a encomenda e compra de vacinas usando os vários processos e funções de um sistema operativo realizado em C para o ambito da UC de Sisstemas Operativos </h5>
-
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva  </a> </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: C </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20SO" target="_blank">Projeto Sistemas Operativos   </a> </h4>
-         {% load static %}
-
-
-
-  </div>
-
-
-
-                  <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Sistema de Simulação de um Dashboard de um Carro</h3>
-
-    <h5 style="margin-bottom:0.30cm;"> Sistema que permite simular o funcionamento de um dashboard de um carro , indicando velocidade, velocidade do motor entre outros realizado em simulador Tinkercad para a plataforma Arduino, no ambito da UC de AAC</h5>
-
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva  </a> </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: C, Arduino,Tinkercad </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://www.tinkercad.com/things/gJG0dcLMxYi-projeto-final " target="_blank"> Projeto Dashboard </a>  </h4>
-
-         {% load static %}
-<iframe width="420" height="210" src="https://www.tinkercad.com/embed/gJG0dcLMxYi?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-
-
-  </div>
-
-
-
-
-
-
-
-
-<div>
-
-    <h3 style="margin-bottom:0.30cm;" > Jogo da Gloria </h3>
-
-    <h5 style="margin-bottom:0.30cm;"> Jogo do tipo Jogo da Gloria feito em Java e Kotlin no ambito da UC de LP2</h5>
-
-    <h4 style="margin-bottom:0.30cm;">Participantes:  <a href="https://github.com/mariosilva22007457" target="_blank" > Mário Silva  </a> </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Tecnologias usadas: Java,Swing,Kotlin </h4>
-
-    <h4 style="margin-bottom:0.30cm;">Github: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20LP2" target="_blank">Jogo Gloria   </a> </h4>
-
-         {% load static %}
-
-        </div>
 
 
 
@@ -316,5 +181,5 @@
 
 
 
-{% endblock %}
+{% endblock main %}
 

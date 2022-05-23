@@ -1,6 +1,8 @@
 from django import forms
 from django.forms import ModelForm
 from .models import Post, Quizz
+from .models import Pessoa, Projetos
+from .models import Noticias
 
 
 class PostForm(ModelForm):
@@ -58,3 +60,82 @@ class QuizzForm(ModelForm):
 help_texts ={
 
 }
+
+
+
+class PessoaForm(ModelForm):
+    class Meta:
+        model = Pessoa
+        fields = '__all__'
+
+
+
+
+        labels = {
+
+
+
+            'nome': 'Insira o seu nome',
+
+            'linkedin': 'Insira Link Linkedin ',  #
+
+
+
+
+        }
+
+help_texts ={
+
+}
+
+
+class ProjetosForm(ModelForm):
+    class Meta:
+        model = Projetos
+        fields = '__all__'
+
+        labels = {
+
+            'titulo': 'Insira titulo',
+
+            'descricao': 'Insira descricao',
+
+            'participantes': 'Insira participantes',
+
+            'tecnologias': 'Insira tecnologias',
+            'github': 'Insira github',
+
+            'ano': 'Insira ano do projeto',
+
+
+        }
+
+
+help_texts = {
+
+}
+
+
+class NoticiasForm(ModelForm):
+    class Meta:
+        model = Noticias
+        fields = '__all__'
+
+        labels = {
+
+            'titulo': 'Insira titulo',
+
+            'descricao': 'Insira descricao',
+
+            'link': 'Insira link',
+
+
+
+        }
+
+
+help_texts = {
+
+}
+
+

@@ -7,7 +7,12 @@ from django.contrib import admin
 from .models import Post
 from .models import PontuacaoQuizz
 from .models import Quizz
-
+from .models import Pessoa
+from .models import Projetos
+from .models import Noticias
 admin.site.register(Post)
 admin.site.register(PontuacaoQuizz)
 admin.site.register(Quizz)
+admin.site.register(Pessoa)
+admin.site.register(Projetos)
+admin.site.register(Noticias)

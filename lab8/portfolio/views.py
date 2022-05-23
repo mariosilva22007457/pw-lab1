@@ -11,6 +11,9 @@ from portfolio.models import Post, PontuacaoQuizz
 from .models import Quizz
 from .forms import QuizzForm
 from .funcQuizz import  desenha_grafico_resultados
+from .forms import Projetos
+from .models import Projetos
+
 
 
 def index_view(request):
@@ -34,7 +37,8 @@ def educacao_view(request):
 
 
 def projetos_view(request):
-    return render(request, 'portfolio/projetos.html')
+    context = {'projetos' : Projetos.objects.all()}
+    return render(request, 'portfolio/projetos.html',context)
 
 
 def licenciatura_view(reuqest):
