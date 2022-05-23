@@ -20,7 +20,7 @@ def desenha_grafico_resultados(objetos):
     figuraOutput = plt.figure(figsize=(5, 5))
 
     # creating the bar plot
-    plt.bar(pontuacao, user, color='blue',
+    plt.bar(user, pontuacao, color='blue',
             width=0.9)
 
     plt.ylabel("Nome dos participantes")

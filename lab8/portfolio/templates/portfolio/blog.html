@@ -2,14 +2,14 @@
 {% extends 'portfolio/layout.html' %}
 
 {% block style %}
-{%  load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blogstyle.css' %}">
 
 
 {% endblock style %}
 
 {% block main %}
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/blogstyle.css' %}">
 <div class="containerblog">
     <div class="divRetangulos">
 
