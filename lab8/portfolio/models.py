@@ -50,7 +50,7 @@ class Projetos(models.Model):
 
     descricao = models.CharField(max_length=500)
 
-    participantes = models.ForeignKey(Pessoa, on_delete=models.CASCADE)
+    participantes = models.ManyToManyField(Pessoa)
 
     tecnologias = models.CharField(max_length=100)
 
@@ -68,6 +68,8 @@ class Noticias(models.Model):
     titulo = models.CharField(max_length=100)
     descricao = models.CharField(max_length=500)
     link = models.URLField(max_length=200, blank=True)
+    imagem = models.ImageField(upload_to='media/', null=True)
+
     def __str__(self):
         return f"{self.titulo}"
 

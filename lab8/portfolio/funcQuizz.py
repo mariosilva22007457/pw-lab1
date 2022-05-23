@@ -2,6 +2,27 @@ from .models import Quizz
 import matplotlib.pyplot as plt
 
 
+def QuizzPontuacao(input):
+    user_score = 0
+
+    if input.pergunta1 == "New Orleans":
+        user_score += 1
+
+    if input.pergunta2 == "Jogador de basebol":
+        user_score += 5
+
+    if input.pergunta3 == "Livery Stable Blues":
+        user_score += 5
+
+    if input.pergunta4 == "Ella Fitzgerald":
+        user_score += 5
+
+    if input.pergunta5 == "Trompete":
+        user_score += 5
+
+    return user_score
+
+
 def info_user(objetos):
     dados = {}
     for quizz in objetos:
@@ -17,34 +38,13 @@ def desenha_grafico_resultados(objetos):
     user = list(dados.keys())
     pontuacao = list(dados.values())
 
-    figuraOutput = plt.figure(figsize=(5, 5))
+    figuraOutput = plt.figure(figsize=(10, 5))
 
     # creating the bar plot
     plt.bar(user, pontuacao, color='blue',
-            width=0.9)
+            width=0.3)
 
-    plt.ylabel("Nome dos participantes")
-    plt.xlabel("Pontuação")
-    plt.title("Pontuação dos participantes!")
+    plt.ylabel("Pontuação")
+    plt.xlabel("Quizz Jazz")
+    plt.title("Participantes")
     plt.savefig('portfolio/static/portfolio/images/grafico_final.png')
-
-
-def QuizzPontuacao(input):
-    pontuacaoDaPessoa = 0
-
-    if input.pergunta1 == "New Orleans":
-        pontuacaoDaPessoa += 5
-
-    if input.pergunta2 == "Jogador de basebol":
-        pontuacaoDaPessoa += 5
-
-    if input.pergunta3 == "Livery Stable Blues":
-        pontuacaoDaPessoa += 5
-
-    if input.pergunta4 == "Ella Fitzgerald":
-        pontuacaoDaPessoa += 5
-
-    if input.pergunta5 == "Trompete":
-        pontuacaoDaPessoa += 5
-
-    return pontuacaoDaPessoa

@@ -100,9 +100,9 @@
 
     <h5 style="margin-bottom:0.30cm;"> Descricão:    {{projeto.descricao}}           </h5>
 
-
-    <h4 style="margin-bottom:0.30cm;">  Participantes:   <a href="{{ projeto.participantes.linkedin }}" target="_blank" > {{ projeto.participantes }}</a> </h4>
-
+        {% for pessoas in projeto.participantes.all %}
+    <h4 style="margin-bottom:0.30cm;">  Participantes:   <a href="{{ pessoas.linkedin }}" target="_blank" > {{ pessoas }}</a> </h4>
+    {% endfor %}
 
     <h4 style="margin-bottom:0.30cm;">  Tecnologias:      {{ projeto.tecnologias }}              </h4>
 

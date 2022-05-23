@@ -1,12 +1,18 @@
 .container{
-position: relative;
   display: flex;
-align-content: center;
-        min-height: 3200px;
+    position: relative;
 
     background-image: url('../images/pexels-pixabay-261579.jpg');
    flex-wrap: wrap;
 
+
+
+
+
+        min-height: 300px;
+
+
+      justify-content:center;
 
   /* Create the parallax scrolling effect */
   background-attachment: scroll;
@@ -15,32 +21,13 @@ align-content: center;
   background-size: cover;
 }
 
-.divRetangulos{
-   display: grid;
-   grid-template-columns: repeat(2, auto);
-   grid-template-rows: repeat(1, auto);
-   margin-top: 80px;
-   margin-left: 20px;
-   padding: 30px;
-   gap: 17px;
-}
-
-.divRetangulos div{
-    width: 500px;
-    height: 350px;
-    box-shadow: 5px 2px 3px 7px black;
-    border-radius: 10px;
-    background-color: LightGray;
-    margin: 7px;
-    padding-left: 50px;
-}
 
 .btn{
     margin-top: 20px;
     background: #3f51b5;
 }
 
-.divRetangulos div .graph{
+.container div .graph{
     margin-top: 500px;
 }
 
@@ -48,7 +35,11 @@ align-content: center;
     margin-top: 500px;
 }
 
-.divRetangulos div img{
-    height: 300px;
-    width: 300px;
+ .centrar2{display:block;text-align:center; padding-top: 30px}
+.container div img{
+    display: block;
+margin-left: auto;
+margin-right: auto;
+    height: 400px;
+    width: 400px;
 }
