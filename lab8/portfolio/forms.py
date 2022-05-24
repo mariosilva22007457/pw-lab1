@@ -192,6 +192,8 @@ class PadroesForm(ModelForm):
             'link':'Insira o link',
 
             'descricao': 'Insira as caracteristicas',
+
+            'imagem': 'Insira Imagem',
         }
 
 
@@ -209,6 +211,7 @@ class TecnicasForm(ModelForm):
 
         labels = {
             'nome': 'Insira titulo',
+            'imagem': 'Insira Imagem',
 
             'link': 'Insira o link',
         }

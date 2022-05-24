@@ -103,6 +103,7 @@ class Tecnologias(models.Model):
 class Padroes(models.Model):
     nome = models.CharField(max_length=200)
     descricao = models.CharField(max_length=500,blank=True)
+    imagem = models.ImageField(upload_to='media/', null=True)
     link = models.URLField(max_length=500,blank=True)
     def __str__(self):
         return f"{self.nome}"
@@ -111,3 +112,4 @@ class Padroes(models.Model):
 class Tecnicas(models.Model):
     nome = models.CharField(max_length=200)
     link = models.URLField(max_length=200, blank=True)
+    imagem = models.ImageField(upload_to='media/', null=True)
