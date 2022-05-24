@@ -2,7 +2,7 @@
 position: relative;
   display: flex;
 align-content: center;
-        min-height: 5000px;
+        min-height: 5550px;
 
     background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
    flex-wrap: wrap;
@@ -59,32 +59,20 @@ margin-bottom: 10px;
 }
 
 
+
 .centrartexto3{
         text-align: center;
-
-
-    position: relative;
-  width: 40%;
-
-
-    margin-bottom: 5px;
-    color: aliceblue;
-}
-
-.centrartexto4{
-        text-align: right;
-        margin-right: 180px;
-
-
+gap: 20px;
+margin-bottom: 10px;
+    margin-top: 10px;
     position: relative;
   width: 100%;
 
 
-    margin-bottom: 10px;
-    color: aliceblue;
 
-   align-items:center;
+    color: aliceblue;
 }
+
 
 
 
@@ -149,11 +137,13 @@ gap: 10px;
 
 
 
-.img{
+.imagem{
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 736px;
+  border-radius: 15px;
+    gap: 2px;
+    margin: 5px;
+    padding: 2px;
+
 
 }
 

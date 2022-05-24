@@ -12,13 +12,6 @@ class Post(models.Model):
         return f"{self.autor} no {self.data}, adicionou um {self.titulo} com a{self.descricao} e link {self.link}"
 
 
-class PontuacaoQuizz(models.Model):
-    nome = models.CharField(max_length=100)
-    pontuacao = models.IntegerField()
-
-    def __str__(self):
-        return f"{self.nome}  {self.pontuacao}"
-
 
 class Quizz(models.Model):
     nome = models.CharField(max_length=50)

@@ -7,7 +7,7 @@ import datetime
 from django.urls import reverse
 
 from portfolio.forms import PostForm
-from portfolio.models import Post, PontuacaoQuizz, Noticias, Tecnologias, Tecnicas, Padroes
+from portfolio.models import Post,  Noticias, Tecnologias, Tecnicas, Padroes
 from .models import Quizz
 from .forms import QuizzForm
 from .funcQuizz import draw_graph
