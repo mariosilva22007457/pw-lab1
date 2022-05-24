@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from .models import Post, Quizz
 from .models import Pessoa, Projetos
-from .models import Noticias
+
 
 
 class PostForm(ModelForm):
@@ -116,26 +116,5 @@ help_texts = {
 }
 
 
-class NoticiasForm(ModelForm):
-    class Meta:
-        model = Noticias
-        fields = '__all__'
-
-        labels = {
-
-            'titulo': 'Insira titulo',
-
-            'descricao': 'Insira descricao',
-
-            'link': 'Insira link',
-
-
-
-        }
-
-
-help_texts = {
-
-}
 
 

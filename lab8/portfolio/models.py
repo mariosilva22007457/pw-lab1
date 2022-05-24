@@ -64,13 +64,5 @@ class Projetos(models.Model):
         return f"{self.titulo}"
 
 
-class Noticias(models.Model):
-    titulo = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=500)
-    link = models.URLField(max_length=200, blank=True)
-    imagem = models.ImageField(upload_to='media/', null=True)
-
-    def __str__(self):
-        return f"{self.titulo}"
 
 

@@ -41,6 +41,8 @@ def projetos_view(request):
     return render(request, 'portfolio/projetos.html',context)
 
 
+
+
 def licenciatura_view(reuqest):
     return render(reuqest, 'portfolio/licenciatura.html'
 
