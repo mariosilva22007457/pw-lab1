@@ -7,11 +7,7 @@
 </head>
 
 
-
 <body>
-
-
-
 
 
 
@@ -21,18 +17,6 @@
 
 
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/licenciatura.css' %}"/>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -47,15 +31,27 @@
    <h1  class="centrarTexto" >1º Ano | 1º Semestre </h1>
 
 
-
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 1 and unidadecurricular.semestre == "1º" %}
   <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" >Fundamentos de Fisica
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-&#9733;
-         </span></h3>
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+          Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+               Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
+
 
 
     <h4 style="margin-bottom:0.20cm;">Topicos:
@@ -63,11 +59,7 @@
         <br>
         <p>
 
-         Sistemas de unidades, grandezas e dimensões. Movimento unidimensional e bidimensional
-Leis de Newton. Trabalho. Energia potencial. Conservação da energia mecânica. Centro de
-massa. Colisões. Momento de uma força e momento de inércia. Momento angular.Gravidade.
-Leis de Kepler. Lei da gravitação de Newton.Equilíbrio estático e elasticidade. Tensão e
-deformação.Oscilações. Lei de Coulomb. Campo Elétrico. Potencial Elétrico. Corrente elétrica e Resistência elétrica.
+{{ unidadecurricular.topicos }}
         </p>
     </h4>
 
@@ -75,20 +67,22 @@ deformação.Oscilações. Lei de Coulomb. Campo Elétrico. Potencial Elétrico.
 
  </h4>
 
+    {% for profs in unidadecurricular.professores.all %}
        <h4 style="margin-bottom:0.20cm;">Professores:
        <ul>
 
-           <a href="https://www.ulusofona.pt/docentes/cristina-maria-ribeiro-guerra">
-           <lu>Cristina Guerra </lu>
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
                   </a>
 
        </ul>
 
 
        </h4>
+                   {% endfor %}
 
       <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/fundamentos-de-fisica/ULHT260-7336" target="_blank" >
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
           Link UC
       </a>
 
@@ -96,295 +90,21 @@ deformação.Oscilações. Lei de Coulomb. Campo Elétrico. Potencial Elétrico.
 
       </h4>
 
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
 
 
-    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20Fisica" target="_blank">Lançamento Projetil</a> </h4>
-      <h4>  </h4>
+       {% endfor %}
 
 
 
 
   </div>
 
+      {% endif %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Fundamentos de Programação
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-            <br>
-        <br>
-        <p>
-
-    Introdução à programação
-    Algoritmos, fluxogramas, pseudo-código
-    Sintaxe e semântica das linguagens
-    Elementos da sintaxe, estrutura de um programa
-    Declarações e atribuições
-    Tipos primitivos
-    Expressões aritméticas, expressões lógicas
-    Entradas e saídas de dados
-    Selecção
-    Repetição
-    Funções
-    Tratamento de erros
-    Leitura e escrita de ficheiros
-    Boas práticas de programação imperativa
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-           <a href="https://www.ulusofona.pt/docentes/pedro-hugo-de-queiros-alves">
-           <ul>Pedro Alves</ul>
-
-                </a>
-
-           <a href="https://www.ulusofona.pt/docentes/bruno-david-ferreira-saraiva">
-           <ul >Bruno Saraiva</ul>
-
-                 </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/fundamentos-de-programacao/ULHT260-7337" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20FP" target="_blank">Xadrez</a>
-    </h4>
-
-
-
-  </div>
-
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Matematica Discreta
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-Elementos de Lógica Matemática
-Elementos da Teoria Intuitiva de Conjuntos: Generalidades sobre relações binárias. Operações com relações binárias. Relações de equivalência. Partição de um conjunto. Digrafos- Morfismos de digrafos.
-Linguagens Formais: Generalidades. Operações com linguagens. Fecho e fecho positivo de uma linguagem. Linguagens regulares. Gramáticas formais. Generalidades. Derivação.  Linguagem gerada por uma gramática. Gramáticas regulares.
-Autómatos Finitos: Generalidades. Autómato determinístico e não determinístico. Linguagem reconhecida por um autómato. Linguagem reconhecível.
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-           <a href="https://www.ulusofona.pt/docentes/teresa-maria-catanho-da-silva-almada">
-           <ul>Teresa Almada</ul>
-                </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/matematica-discreta/ULHT260-1656" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-  </div>
-
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Matematica I
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-Os números reais.
-            Funções reais de variável real.
-             Limites.
-             Derivadas.
-            Estudo global de uma função.
-            Integração.
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-           <a href="https://www.ulusofona.pt/docentes/andre-vieira-vassalo-da-fonseca">
-           <ul>Andre Fonseca</ul>
-               </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/matematica-i/ULHT260-1" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Sistemas Digitais
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-    Códigos numéricos e Sistemas de Numeração (5%) Circuitos Lógicos Básicos
-
-    Álgebra de Boole
-
-    Funções Lógicas
-
-    Circuitos Combinatórios Básicos
-
-    Circuitos Digitais com Memória
-
-    Síntese de Circuitos Sequênciais Elementares
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-           <a href="https://www.ulusofona.pt/docentes/maria-helena-silva-fino">
-                  <ul>Helena Fino</ul>
-           </a>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   {% endfor %}
 
 
       <h1 class="centrarTexto" >1º Ano | 2º Semestre </h1>
@@ -392,17 +112,26 @@ Os números reais.
 
 
 
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 1 and unidadecurricular.semestre == "2º" %}
+  <div>
+
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
 
 
 
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
 
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Álegbra Linear
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
 
 
 
@@ -411,41 +140,30 @@ Os números reais.
         <br>
         <p>
 
-Breve apresentação do corpo dos reais. Introdução aos corpos Zp
-
-Espaços vectoriais Subespaços vectoriais .Teorema de Steinitz e suas consequências.
-
- Aplicações lineares. Isomorfismos
-
- Matrizes reais :Espaços vectoriais de matrizes .Produto de Matrizes
-
-Sistemas de Equações lineares: Estudo  e resolução de equações vectoriais lineares. Representação de subespaços vectoriais através de sistemas de equações lineares
-
- Determinantes: principai propriedades dos determinantes. Teorema de LaPlace.
-
-Valores e vectores próprios.
-
-
+{{ unidadecurricular.topicos }}
         </p>
     </h4>
 
 
 
+ </h4>
 
+    {% for profs in unidadecurricular.professores.all %}
        <h4 style="margin-bottom:0.20cm;">Professores:
        <ul>
 
-      <a href="https://www.ulusofona.pt/docentes/teresa-maria-catanho-da-silva-almada">
-           <ul>Teresa Almada</ul>
-                </a>
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
 
        </ul>
 
 
        </h4>
+                   {% endfor %}
 
       <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/algebra-linear/ULHT260-2091" target="_blank" >
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
           Link UC
       </a>
 
@@ -453,463 +171,46 @@ Valores e vectores próprios.
 
       </h4>
 
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
 
 
-
-
-
-
-  </div>
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Algoritmia e Estruturas de Dados
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-    funções recursivas, algoritmos recursivos
-    tipos de dados complexos
-    eficiência e optimização (algorítmica e não-algorítmica)
-    complexidade de algoritmos
-    algoritmos de pesquisa
-    algoritmos de ordenação - bubble sort, selection sort, merge sort, quick sort
-    tipos de dados abstractos - pilhas e filas
-    listas ligadas
-    árvores binárias, árvores ordenadas, árvores AVL
-    hashtables
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-           <a href="https://www.ulusofona.pt/docentes/pedro-hugo-de-queiros-alves">
-           <ul>Pedro Alves</ul>
-
-                </a>
-
-           <a href="https://www.ulusofona.pt/docentes/rodrigo-coutinho-correia">
-           <ul >Rodrigo Correia</ul>
-
-                 </a>
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/algoritmia-e-estruturas-de-dados/ULHT260-13397" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20AED" target="_blank">Base de Dados Musical</a>
-    </h4>
-
-
-
+       {% endfor %}
 
 
 
 
   </div>
 
-<div>
+      {% endif %}
 
-
-    <h3 style="margin-bottom:0.30cm;" >Arquiteura de Computadores
-        |5 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            </span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-    Circuitos digitais MSI: Portas Lógicas, registos, contadores, memórias, multiplexers e descodificadores. Simulação.
-    Arquitetura de um Microprocessador (CPU) genérico.
-        Componentes básicos: ALU, Registos e Barramentos.
-        Instruções e Microinstruções
-        Memórias de Programa e Dados.
-        Fluxo de informação num CPU: Operações Fetch e Execution
-    Estudo de um Microcontrolador comercial de baixo custo.
-    Ambiente de desenvolvimento, programação, simulação e teste.
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-           <ul>Daniel Silvestre </ul>
-           <a href="https://www.ulusofona.pt/docentes/sergio-pedro-mestre-ferreira" target="">
-               <ul>
-                   Sergio Ferreira
-
-               </ul>
-
-
-           </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/arquitetura-de-computadores/ULHT260-5857" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-        <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20AC" target="_blank">Sistema de Rega</a>
-    </h4>
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Competências Comportamentais
-        |4 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;&#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-    CV;
-    Portefólio
-    Apresentação pessoal;
-    Apresentação em público e ferramentas para o efeito;
-    Redes sociais;
-    Networking.
-    Factos Vs Opiniões;
-    Gestão de tempo:
-        Trabalho remoto e comunicação mediada;
-    As tecnologias no trabalho: oportunidades e ameaças:
-    Work-life balance;
-    Trabalho em equipa;
-    Personal and Social Skills development
-    Comunicação;
-    Liderança;
-    Conflito e negociação;
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-           <a href="https://www.ulusofona.pt/docentes/diogo-soares-pereira-gil-morais">
-                  <ul>Diogo Morais</ul>
-           </a>
-           <a href="https://www.ulusofona.pt/docentes/manuel-da-costa-leite">
-                  <ul>Manuel Leite</ul>
-           </a>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/competencias-comportamentais/ULHT260-17267" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-            <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20CC/portfolio" target="_blank">Portfolio CV</a>
-    </h4>
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Linguagens de Programação I
-        |5 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-    Módulo 0 - Unidade Curricular
-
-        Objectivos de aprendizagem
-
-        Hello World
-
-    Módulo 1 - Fundamentos de programação em C
-
-        definições
-
-        escrever, compilar e executar um programa
-
-        tipos de dados escalares
-
-        operadores
-
-        instruções de selecção
-
-        ciclos
-
-    Modulo 2 - Tipos de dados vectoriais
-
-        vectores
-
-        strings
-
-        operações com strings
-
-    Módulo 3 - Programação orientada ao procedimento
-
-        funções
-
-        apontadores
-
-        stack
-
-    Modulo 4 - Leitura e escrita de Ficheiros
-
-        Litura de Ficheiros
-
-        Escrita de Ficheiros
-
-        Organização do código - divisão em ficheiros
-
-    Módulo 5 - Conceitos avançados de programação em C
-
-        Recursão
-
-        Estruturas
-
-    Módulo 6 - Memória
-
-        Heap / memória dinâmica
-
-    Módulo 7 - Estruturas de dados
-
-        Listas ligadas
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-         <a href="https://www.ulusofona.pt/docentes/pedro-arroz-correia-bonifacio-serra">
-                  <ul>Pedro Serra</ul>
-           </a>
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/linguagens-de-programacao-i/ULHT260-498" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-                <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20LP1" target="_blank">MineSweeper</a>
-    </h4>
-
-
-
-
-
-
-
-
-
-  </div>
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Matematica II
-        |5 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
- Vectores e geometria do espaço
-Coordenadas cartesianas tridimensionais.
-            Vectores, produto escalar.
- Rectas e planos.
- Superfícies cilíndricas e quádricas.
-
- Noções topologicas
-
- Funções vectoriais de variável real
-
-Funções vectoriais e curvas no espaço.
-
- Limites e continuidade. Diferenciabilidade, vector tangente a uma curva.
-
- Integração, comprimento de uma curva.
-
- Funções de várias variáveis
-
- Dominios e  curvas de nível.
-
- Limites e continuidade.
-
- Derivadas parciais, derivadas de ordem superior.
-
- Diferenciabilidade, planos tangentes e aproximações polinómiais.
-
- Derivada direccional, vector gradiente e sua interpretação geométrica.
-
- Matriz Hessiana, extremos locais e pontos de sela.
-
- Integrais múltiplos
-
- Integrais duplos.
-
- Coordenadas polares e mudança de variáveis em integrais duplos.
-
- Integrais triplos.
-
- Coordenadas cilíndricas e esféricas. Mudança de variáveis em integrais triplos.
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-       <a href="https://www.ulusofona.pt/docentes/andre-vieira-vassalo-da-fonseca">
-                  <ul>Andre Fonseca</ul>
-           </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/matematica-ii/ULHT260-505" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
+   {% endfor %}
 
 
     <h1 class="centrarTexto" >2º Ano | 1º Semestre </h1>
 
-<div>
+
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 2 and unidadecurricular.semestre == "1º" %}
+  <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" >Arquitetura Avançada de Computadores
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
 
 
 
@@ -918,51 +219,30 @@ Funções vectoriais e curvas no espaço.
         <br>
         <p>
 
- O processador
-    Principais módulos funcionais
-    Condutas e riscos
-    Exceções
-    Paralelismo ao nível da instrução
- Hierarquia de memória
-    Dispositivos e tecnologia de armazenamento: disco magnético, memória flash
-    Memórias cache
-    Memória virtual
-    Confiabilidade na hierarquia de memória
-    Paralelismo: coerência entre caches, RAID
- Arquiteturas paralelas
-    Limites de frequência, dissipação de energia e memória
-    Paralelismo e limites ao aumento de desempenho
-    SIMD e processadores vetoriais
-    Multithreading em hardware
-    Arquiteturas de multiprocessador¿ aglomerados e computação em grelha.
-    GPUs
-    Medição de desempenho
- Virtualização
-    Origens e definição do conceito de máquina virtual
-    Conceito de hipervisor
-    Variantes de implementação
-    Virtualização de sistema: processador, memória, periféricos (E/S)
-    Exemplos de plataformas
-
+{{ unidadecurricular.topicos }}
         </p>
     </h4>
 
 
 
+ </h4>
 
+    {% for profs in unidadecurricular.professores.all %}
        <h4 style="margin-bottom:0.20cm;">Professores:
        <ul>
-       <a href="https://www.ulusofona.pt/docentes/pedro-arroz-correia-bonifacio-serra">
-                  <ul>Pedro Serra</ul>
-           </a>
+
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
 
        </ul>
 
 
        </h4>
+                   {% endfor %}
 
       <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/arquiteturas-avancadas-de-computadores/ULHT260-13398" target="_blank" >
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
           Link UC
       </a>
 
@@ -970,542 +250,46 @@ Funções vectoriais e curvas no espaço.
 
       </h4>
 
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
 
 
-                <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://www.tinkercad.com/things/gJG0dcLMxYi-projeto-final" target="_blank">Dashboard</a>
-    </h4>
-
-
-
-
-
-  </div>
-
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Sinais e Sistemas
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
- Sinais e sistemas
-Sistemas Lineares e Invariantes no Tempo (SLITs)
-ransformada de Z
-Transformada de Fourier Discreta;
- Resposta no Tempo de SLITs Causais
- Equações às diferenças
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-<p>
-    Feito Por Equivalência
-</p>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sinais-e-sistemas/ULHT260-7339" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
+       {% endfor %}
 
 
 
 
   </div>
 
+      {% endif %}
 
-<div>
+   {% endfor %}
 
 
-    <h3 style="margin-bottom:0.30cm;" >Sistemas Operativos
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-           </span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-    Conceitos básicos sobre os sistemas operativos: definições, funções e modelos.
-    Processos e escalonamento: processo, espaço de endereçamento, tarefas, algoritmos de escalonamento, sincronização e inter-bloqueio.
-    Gestão de memória: paginação, segmentação, memória virtual.
-    Gestão de armazenamento: sistema de ficheiros e sistemas de entradas e saídas.
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-     <a href="https://www.ulusofona.pt/docentes/naercio-david-pedro-magaia">
-                  <ul>Naercio Magaia</ul>
-           </a>
-
-
-         <a href="https://www.ulusofona.pt/docentes/sergio-rodrigues-nunes">
-                  <ul>Sergio Nunes</ul>
-           </a>
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-operativos/ULHT260-6305" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-                    <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://www.tinkercad.com/things/gJG0dcLMxYi-projeto-final" target="_blank"> Projeto Sistemas Operativos</a>
-    </h4>
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-<div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Linguagens de Programação II
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-    Paradigmas de programação
-        Imperativo, funcional, orientado a objetos
-    Conceitos de programação por objectos
-        Entidades, Atributos, Acções
-        Classe vs Objecto, Principio do encapsulamento
-        Herança, polimorfismo, parametrização por herança, composição
-        UML
-            Diagramas de classes
-    Java orientado a objectos
-        Classes, objectos, variáveis
-        Construtores, métodos
-        Visibilidade, Exceptions
-        Estruturas de dados: Arrays, Lists, Maps
-        Herança, classes abstractas
-        Input/Output
-    Testes unitários
-        JUnit
-    Controlo de versões
-        Git, Github
-    Padrões de desenho
-        Factory, Singleton, Observer/Observable, Composite
-    Conceitos de programação funcional em Kotlin
-        Funções puras, lambdas, funções de primeira ordem, iteração interna, operações com listas
-    Boas práticas de programação multi-paradigma
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-        <a href="https://www.ulusofona.pt/docentes/pedro-hugo-de-queiros-alves">
-           <ul>Pedro Alves</ul>
-
-                </a>
-
-                   <a href="https://www.ulusofona.pt/docentes/lucio-miguel-studer-ferreira">
-           <ul>Lucio Studer</ul>
-
-                </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/linguagens-de-programacao-ii/ULHT260-898" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-                        <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20LP2" target="_blank"> Jogo da Gloria </a>
-    </h4>
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-
-    <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Base de Dados
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-Modelo de relacionamento entre entidades
-O modelo relacional
-Refinamento de esquema: Conceito de normalização e transações
-Arquitetura de SGBD e algum SQL Avançado
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-           <a href="https://www.ulusofona.pt/docentes/rui-pedro-nobre-ribeiro">
-           <ul>Rui Ribeiro</ul>
-
-                </a>
-
-                      <a href="https://www.ulusofona.pt/docentes/jose-aser-castillo-lorenzo">
-           <ul>José Acer</ul>
-
-                </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/bases-de-dados/ULHT260-1792" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-                                <h4 style="margin-bottom:0.20cm;">Projetos Realizados:
-
-        <a href="https://github.com/mariosilva22007457/Projetos-LEI/tree/main/Projetos/Projeto%20BD" target="_blank"> Base de Dados Musicas</a>
-    </h4>
-
-
-
-
-
-
-
-
-
-
-  </div>
 
        <h1 class="centrarTexto" >2º Ano | 2º Semestre </h1>
 
-
-
-
-    <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" >Computação Gráfica
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-    Processamento de Imagens: dos pixeis as caracteristicas;
-    Operações sobre imagens;
-    Segmentação
-    Deteccão de objectos;
-    Extraccão de caracteristicas;
-    Medidas;
-    Analise de aplicacões
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-             <a href="https://www.ulusofona.pt/docentes/joao-pedro-leal-abalada-de-matos-carvalho">
-           <ul>João Carvalho</ul>
-
-                </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/computacao-grafica/ULHT260-2267" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-
-
-
-
-    <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Engenharia de Requisitos e Testes
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-    Visão de Gerenciamento de Sistemas de Informação
-
-    Engenharia de Requisitos (Gestão de backlog, BPMN e UML - Modelação)
-
-    Testes de software
-
-    Gestão de Projetos
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-       <a href="https://www.ulusofona.pt/docentes/rui-pedro-nobre-ribeiro">
-           <ul>Rui Ribeiro</ul>
-
-                </a>
-
-
-                  <a href="https://www.ulusofona.pt/docentes/luis-alexandre-ferreira-de-oliveira-gomes">
-           <ul> Luis A. Gomes</ul>
-
-                </a>
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/engenharia-de-requisitos-e-testes/ULHT260-22512" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-
-
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 2 and unidadecurricular.semestre == "2º" %}
   <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" > Programação Web
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
 
 
 
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-A Web e seus paradigmas
-- Funcionamento da Internet e da Web: arquitetura e protocolos IP e HTTP
-- Tecnologias, paradigmas e padrões de desenho da Web
-
-
-
-HTML e CSS para desenho de páginas Web
-- HTML e seus elementos
-- Formulários para envio de dados
-- HTML5 e elementos semânticos
-- CSS e seus seletores, para estilização de conteúdos
-- Propriedades CSS
-- Design responsivo e layouts dinâmicos
-- Efeitos e animações CSS
-- Bootstrap
-Python para desenvolvimento Web
-- Sintaxe, operadores, controlo de fluxos e tipos de dados
-- Funções e módulos
-- Gestão de ficheiros e pastas
-- Classes
-Django web framework para Back-end
-- Web frameworks
-- Arquitetura MVT
-- Urls, views e templates
-- Linguagem template
-- Modelação de base de dados, ORM
-- Formulários
-- Autenticação
-- Implantação na cloud
-JavaScript para programação Front-end
-- Programação Orientada a Eventos
-- Manipulação do DOM
-- JSON e APIs
-- Single Page Applications
-
-
-        </p>
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
     </h4>
 
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-                 <a href="https://www.ulusofona.pt/docentes/lucio-miguel-studer-ferreira">
-           <ul>Lucio Studer</ul>
-
-                </a>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/programacao-web/ULHT260-11195" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-
-
-
-  <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Sistemas de Suporte à Decisão
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
 
 
 
@@ -1514,41 +298,30 @@ JavaScript para programação Front-end
         <br>
         <p>
 
-
-    Desafios de Negócio de DW
-    Arquitecturas DW
-    Melhores Práticas de Modelação de DW
-    Implementação de ETL
-    Bases de Dados específicas para BI
-    Ferramentas de Relatórios
-
-
+{{ unidadecurricular.topicos }}
         </p>
     </h4>
 
 
 
+ </h4>
 
+    {% for profs in unidadecurricular.professores.all %}
        <h4 style="margin-bottom:0.20cm;">Professores:
        <ul>
-       <a href="https://www.ulusofona.pt/docentes/rui-pedro-nobre-ribeiro">
-           <ul>Rui Ribeiro</ul>
 
-                </a>
-
-
-                  <a href="https://www.ulusofona.pt/docentes/joao-licinio-cabral-da-silva">
-           <ul>João Licínio</ul>
-
-                </a>
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
 
        </ul>
 
 
        </h4>
+                   {% endfor %}
 
       <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-de-suporte-a-decisao/ULHT260-7303" target="_blank" >
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
           Link UC
       </a>
 
@@ -1556,129 +329,48 @@ JavaScript para programação Front-end
 
       </h4>
 
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
 
 
-
-
-
-
-  </div>
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Redes de Computadores
-        |6 ETCS | <span class="estrelas">&#9733;
-&#9733;&#9733;
-            &#9733;</span></h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-CP1: Introdução
-
-    O que é a Internet?
-    Elementos
-    Convenções
-    Serviços
-    Protocolos
-    The Network Edge (Periferia da Network)
-    The Network Core (Malha interna)
-    Circuit Switching (Comutação de Circuitos)
-    Packet Switching (Comutação de Pacotes)
-    Topologias e Redes de Acesso
-    Niveis de Protocolos e Modelos de Serviço
-
-CP2: Camada de Aplicação
-
-    Evolução de Aplicações de Internet
-    DNS (Domain Name System)
-    HTTP (HyperText Transfer Protocol)
-    Web proxies and caching
-    Sistemas Distribuidos
-    Peer-to-peer (BitTorrent)
-    Aplicações Real-time (VoIP)
-
-CP3: Camada de Transporte
-
-    Service models
-    User Datagram Protocol (UDP)
-    Connections (TCP)
-    Sliding Window (TCP)
-    Flow control (TCP)
-    Retransmission timers (TCP)
-    Congestion control (TCP)
-
-CP4: Camada de Rede
-
-    Network service models
-    IP (Internet Protocol)
-    NAT, a ¿middlebox¿
-    Routing algorithms
-
-CP5: Camada Data Link
-
-    Framing
-    Error detection and correction
-    Retransmissions
-    Multiple Access
-    Switching
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-         <a href="https://www.ulusofona.pt/docentes/sergio-rodrigues-nunes">
-                  <ul>Sergio Nunes</ul>
-           </a>
-
-
-
-                  <ul>Liliana Carvalho</ul>
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/redes-de-computadores/ULHT260-1793" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
+       {% endfor %}
 
 
 
 
   </div>
+
+      {% endif %}
+
+   {% endfor %}
+
+
+
 
 
  <h1 class="centrarTexto" >3º Ano | 1º Semestre </h1>
 
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 3 and unidadecurricular.semestre == "1º" %}
+  <div>
 
- <div>
+
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
 
 
-    <h3 style="margin-bottom:0.30cm;" > Trabalho Final de Curso
-        |20 ETCS |</h3>
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
 
 
 
@@ -1687,25 +379,30 @@ CP5: Camada Data Link
         <br>
         <p>
 
-
-
+{{ unidadecurricular.topicos }}
         </p>
     </h4>
 
 
 
+ </h4>
 
+    {% for profs in unidadecurricular.professores.all %}
        <h4 style="margin-bottom:0.20cm;">Professores:
        <ul>
 
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
 
        </ul>
 
 
        </h4>
+                   {% endfor %}
 
       <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
           Link UC
       </a>
 
@@ -1713,216 +410,46 @@ CP5: Camada Data Link
 
       </h4>
 
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
 
 
-
-
-
-
-  </div>
-
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Computação Distribuída
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
+       {% endfor %}
 
 
 
 
   </div>
 
+      {% endif %}
 
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Data Science
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Engenharia de Software
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Interação Humano-Máquina
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
+   {% endfor %}
 
 
  <h1 class="centrarTexto" >3º Ano | 2º Semestre </h1>
 
 
- <div>
+{% for unidadecurricular in unidades_curriculars  %}
+    {% if unidadecurricular.ano == 3 and unidadecurricular.semestre == "2º" %}
+  <div>
 
 
-    <h3 style="margin-bottom:0.30cm;" > Trabalho Final de Curso
-        |20 ETCS |</h3>
+    <h3 style="margin-bottom:0.30cm;" >
+        {{ unidadecurricular.titulo }}
+    </h3>
+
+
+
+    <h4 style="margin-bottom:0.30cm;" >
+        Ano:
+        {{ unidadecurricular.ano }}
+    </h4>
+
+          <h4 style="margin-bottom:0.30cm;" >
+              Semestre:
+        {{ unidadecurricular.semestre }}
+    </h4>
 
 
 
@@ -1931,25 +458,30 @@ CP5: Camada Data Link
         <br>
         <p>
 
-
-
+{{ unidadecurricular.topicos }}
         </p>
     </h4>
 
 
 
+ </h4>
 
+    {% for profs in unidadecurricular.professores.all %}
        <h4 style="margin-bottom:0.20cm;">Professores:
        <ul>
 
+           <a href="{{ profs.linkedin }}" target="_blank">
+           <lu> {{ profs }}</lu>
+                  </a>
 
        </ul>
 
 
        </h4>
+                   {% endfor %}
 
       <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
+     <a href="{{ unidadecurricular.linkUC }}" target="_blank">
           Link UC
       </a>
 
@@ -1957,213 +489,21 @@ CP5: Camada Data Link
 
       </h4>
 
+        {% for projetosRealizados in unidadecurricular.projetos.all %}
+
+    <h4 style="margin-bottom:0.20cm;">Projetos Realizados: <a href="{{ projetosRealizados.github }}" target="_blank">{{ projetosRealizados  }}</a> </h4>
 
 
-
-
-
-
-  </div>
-
-
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Computação Móvel
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
+       {% endfor %}
 
 
 
 
   </div>
 
+      {% endif %}
 
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Inteligência Artificial
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Segurança Informática
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-
-
- <div>
-
-
-    <h3 style="margin-bottom:0.30cm;" > Sistemas de Informação na Nuvem
-        |5 ETCS |</h3>
-
-
-
-    <h4 style="margin-bottom:0.20cm;">Topicos:
-        <br>
-        <br>
-        <p>
-
-
-
-        </p>
-    </h4>
-
-
-
-
-       <h4 style="margin-bottom:0.20cm;">Professores:
-       <ul>
-
-
-       </ul>
-
-
-       </h4>
-
-      <h4 style="margin-bottom:0.20cm;">
-      <a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/sistemas-digitais/ULHT260-7" target="_blank" >
-          Link UC
-      </a>
-
-
-
-      </h4>
-
-
-
-
-
-
-
-  </div>
-
-
-
+   {% endfor %}
 
 
 

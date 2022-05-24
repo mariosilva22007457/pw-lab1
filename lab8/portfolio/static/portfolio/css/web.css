@@ -1,9 +1,8 @@
-
 .containerweb {
 position: relative;
   display: flex;
 align-content: center;
-        min-height: 3200px;
+        min-height: 5000px;
 
     background-image: url('../images/hologram_scheme_scifi_139294_3840x2160.jpg');
    flex-wrap: wrap;
@@ -49,12 +48,13 @@ align-content: center;
 .centrartexto2{
         text-align: center;
 
-
+margin-bottom: 10px;
+    margin-top: 10px;
     position: relative;
   width: 100%;
 
 
-    margin-bottom: 5px;
+
     color: aliceblue;
 }
 
@@ -97,13 +97,14 @@ align-content: center;
 
 .containerweb div{
 
-          width: 550px;
-    height: 550px;
+          width: 570px;
+    height: 620px;
     box-shadow: 5px 5px 15px #888888;
-            border-radius: 12px;
-            padding: 10px 20px;
+            border-radius: 24px;
+            padding: 20px 40px;
+gap: 10px;
 
-            margin: 25px;
+            margin: 10px;
          align-items: center;
     flex-wrap: wrap;
      justify-content: space-around;
@@ -114,6 +115,39 @@ align-content: center;
 
 
 }
+
+
+
+
+
+.containerweb div:nth-child(19){
+
+          width: 250px;
+    height: 220px;
+    box-shadow: 5px 5px 15px #888888;
+            border-radius: 24px;
+            padding: 20px 40px;
+gap: 10px;
+
+            margin: 10px;
+         align-items: center;
+    flex-wrap: wrap;
+     justify-content: space-around;
+
+       background-image: url('../images/depositphotos_14490301-stock-photo-highly-detailed-grunge-background.jpg');
+
+
+
+
+}
+
+
+
+
+
+
+
+
 
 .img{
   border: 1px solid #ddd;

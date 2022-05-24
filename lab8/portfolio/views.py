@@ -7,13 +7,14 @@ import datetime
 from django.urls import reverse
 
 from portfolio.forms import PostForm
-from portfolio.models import Post, PontuacaoQuizz
+from portfolio.models import Post, PontuacaoQuizz, Noticias, Tecnologias, Tecnicas, Padroes
 from .models import Quizz
 from .forms import QuizzForm
-from .funcQuizz import  draw_graph
+from .funcQuizz import draw_graph
 from .forms import Projetos
 from .models import Projetos
-
+from .models import UnidadesCurriculares
+from .forms import UnidadesCurricularesForm
 
 
 def index_view(request):
@@ -37,16 +38,13 @@ def educacao_view(request):
 
 
 def projetos_view(request):
-    context = {'projetos' : Projetos.objects.all()}
-    return render(request, 'portfolio/projetos.html',context)
-
-
+    context = {'projetos': Projetos.objects.all()}
+    return render(request, 'portfolio/projetos.html', context)
 
 
 def licenciatura_view(reuqest):
-    return render(reuqest, 'portfolio/licenciatura.html'
-
-                  )
+    context = {'unidades_curriculars': UnidadesCurriculares.objects.all()}
+    return render(reuqest, 'portfolio/licenciatura.html', context)
 
 
 def blog_view(request):
@@ -54,11 +52,10 @@ def blog_view(request):
     return render(request, 'portfolio/blog.html', context)
 
 
+
 def web_view(reuqest):
-    return render(reuqest, 'portfolio/web.html')
-
-
-
+    context = {'noticias': Noticias.objects.all(),'tecnologias': Tecnologias.objects.all(),'tecnicas': Tecnicas.objects.all(),'padroes': Padroes.objects.all()}
+    return render(reuqest, 'portfolio/web.html', context)
 
 
 def login_view(request):
@@ -98,7 +95,6 @@ def apaga_post_view(request, blog_post_id):
 
 
 def quizz_view(request):
-
     draw_graph(Quizz.objects.all())
 
     form = QuizzForm(request.POST, use_required_attribute=False)
