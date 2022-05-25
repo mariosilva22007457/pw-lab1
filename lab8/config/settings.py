@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'cloudinary_storage',
+    'cloudinary',
 
 
 ]
@@ -124,7 +126,16 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = '/portfolio/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+CLOUDINARY_STORAGE = {
+  'CLOUD_NAME': "dd3kxor21",
+  'API_KEY': "783668588449233",
+  'API_SECRET': "PbboB6UMiC0kGuu5PReu1R0ZTEc",
+}
+
+MEDIA_URL = '/portfolio/'
 
