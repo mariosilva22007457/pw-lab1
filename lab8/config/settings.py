@@ -137,5 +137,5 @@ CLOUDINARY_STORAGE = {
   'API_SECRET': "PbboB6UMiC0kGuu5PReu1R0ZTEc",
 }
 
-MEDIA_URL = '/portfolio/'
+
 
